@@ -1,0 +1,118 @@
+/*
+ ============================================================================
+ Name        : test_swtichcase_.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef enum
+{
+        red,
+        green,
+        blue,
+        yellow,
+        magenta,
+        cyan,
+        orange,
+        violet
+
+}set_color_font;
+
+struct config_option
+{
+        short int ver_alert[2];
+        short int hor_alert[2];
+        int ver_alertLow2;
+        int hor_alertLow2;
+        char low_1[20];
+        char low_2[20];
+        set_color_font _set_color_font;
+} set_text_alert;
+
+
+struct R_G_B
+{
+        int _red;//set_color_RED
+        int _green;//set_color_GREEN
+        int _blue;//set_color_BLUE
+}R_G_B;
+
+int *set_color(struct R_G_B *rgb)
+{
+	rgb->_red = 100;
+	rgb->_green = 0;
+	rgb->_blue =0;
+        switch(1)
+        {
+        case red:
+        {
+                int arr_color[4] = {rgb->_red,0,0};
+                return arr_color;
+                break;
+        }
+        case green:
+        {
+                int arr_color[4] = {0,rgb->_green,0};
+                return arr_color;
+                break;
+        }
+        case blue:
+        {
+               int arr_color[4] = {0,0,rgb->_blue};
+                return arr_color;
+                break;
+        }
+        case yellow:
+        {
+                int arr_color[4] = {rgb->_red,rgb->_green,0};
+                return arr_color;
+                break;
+        }
+        case magenta:
+        {
+                int arr_color[4] = {rgb->_red,0,rgb->_blue};
+                return arr_color;
+                break;
+        }
+        case cyan:
+        {
+                 int arr_color[4] = {0,rgb->_green,rgb->_blue};
+                return arr_color;
+                break;
+        }
+        case orange:
+        {
+                rgb->_green = (rgb->_red/2);
+                 int arr_color[4] = {rgb->_red,rgb->_green,0};
+                return arr_color;
+                break;
+        }
+        case violet:
+        {
+                rgb->_red = (rgb->_blue/2);
+                 int arr_color[4] = {rgb->_red,0,rgb->_blue};
+                return arr_color;
+                break;
+        }
+        default:
+        {
+        	int arr_color[4] = {rgb->_red,0,rgb->_blue};
+                printf("No_color\n");
+                return arr_color;
+                break;
+        }
+        }
+}
+int main(void)
+{
+	int *p;
+	p = set_color(&R_G_B);
+
+	printf("!!!Hello World!!!%d ",*p); /* prints !!!Hello World!!! */
+}

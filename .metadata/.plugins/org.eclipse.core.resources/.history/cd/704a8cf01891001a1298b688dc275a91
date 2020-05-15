@@ -1,0 +1,46 @@
+package desktop.c;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import desktop.model.config_port;
+import desktop_view.connectport_view;
+
+public class connectport_menu implements ActionListener {
+
+	private connectport_view view;
+	private config_port model;
+	private String port_fine;
+
+	public connectport_menu(connectport_view view, config_port model) {
+		this.view = view;
+		this.model = model;
+		view.setVisible(true);
+		view.getBtn_connect().setActionCommand("connect");
+		view.getBtn_disconnect().setActionCommand("disconnect");
+		view.getBtn_connect().addActionListener(this);
+		view.getBtn_disconnect().addActionListener(this);
+		port_fine = model.init_port();
+		// if (model.init_port() != null) {
+		// view.setShow_port("Find_port" + port_fine);
+		// } else {
+		// view.setShow_port("Port is Null");
+		// }
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		String command = e.getActionCommand();
+		if (command.equals("connect")) {
+			// Select_page select = new Select_page();
+			// new select_menu(select);
+			System.out.println("Connect1:" + port_fine);
+		} else {
+			System.out.print("Disconnect");
+		}
+
+	}
+
+}

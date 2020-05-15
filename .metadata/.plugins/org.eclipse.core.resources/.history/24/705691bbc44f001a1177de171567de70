@@ -1,0 +1,79 @@
+package com.java.blue_set;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class Form3 extends JFrame {
+
+	final config_port cf_serial = new config_port();
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Form3 frame = new Form3();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Form3() {
+		getContentPane().setBackground(Color.WHITE);
+		setSize(new Dimension(500, 500));
+		setTitle("TEST_JAVA");
+		getContentPane().setLayout(null);
+
+		JButton btnCloseport = new JButton();
+		btnCloseport.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cf_serial.close();
+				JOptionPane.showMessageDialog(null, "ClosePort", "SerialPort",
+						1);
+			}
+		});
+		btnCloseport.setText("close_port");
+		btnCloseport.setBounds(182, 135, 89, 23);
+		getContentPane().add(btnCloseport);
+
+		JButton btnOpenport = new JButton();
+		btnOpenport.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				cf_serial.initialize();
+				JOptionPane
+						.showMessageDialog(null, "OpenPort", "SerialPort", 1);
+			}
+		});
+		btnOpenport.setText("Open_port");
+		btnOpenport.setBounds(182, 165, 89, 23);
+		getContentPane().add(btnOpenport);
+
+		final JComboBox comboBox = new JComboBox(config_java.COM_SET.values());
+		comboBox.setBounds(143, 224, 128, 26);
+		getContentPane().add(comboBox);
+
+		comboBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(comboBox.getItemAt(comboBox
+						.getSelectedIndex()));
+
+				config_java.Config_command[0] = comboBox.getSelectedIndex();
+
+			}
+		});
+		System.out.print("HELLO");
+	}
+}

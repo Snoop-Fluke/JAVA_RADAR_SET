@@ -1,0 +1,95 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef enum
+{
+        red,
+        green,
+        blue,
+        yellow,
+        magenta,
+        cyan,
+        orange,
+        violet
+
+}set_color_font;
+
+struct config_option
+{
+        short int ver_alert[2];
+        short int hor_alert[2];
+        int ver_alertLow2;
+        int hor_alertLow2;
+        char low_1[20];
+        char low_2[20];
+        set_color_font _set_color_font;
+} set_text_alert;
+
+
+struct R_G_B
+{
+        int _red;//set_color_RED
+        int _green;//set_color_GREEN
+        int _blue;//set_color_BLUE
+}R_G_B;
+
+int *set_color(struct R_G_B *rgb,struct config_option *aa)
+{
+	rgb->_red = 100;
+	rgb->_green = 0;
+	rgb->_blue =0;
+    int arr_color[4];
+    int command_input = 1;
+    aa->_set_color_font = 1;
+
+        switch(2)
+        {
+        printf( "return red");
+        case 2:
+        {
+        	printf( "return red");
+        	arr_color[0] = 20;
+        	arr_color[1] =20;
+        	arr_color[2] =20;
+        	printf( "return red");
+                return arr_color;
+                printf( "return red");
+                break;
+        }
+
+        case 1:
+         {
+
+         	arr_color[0] = 20;
+         	arr_color[1] =20;
+         	arr_color[2] =20;
+
+                 return arr_color;
+                 printf( "return red");
+                 break;
+         }
+
+        default:
+        {
+
+        				arr_color[0] = 20;
+        	        	arr_color[1] =20;
+        	        	arr_color[2] =20;
+
+        	                return arr_color;
+        	                printf( "return default");
+        	                break;
+        }
+        }
+}
+int test_print()
+{
+	printf("hello");
+}
+int main()
+{
+	 int *p;
+ p = set_color(&R_G_B,&set_text_alert);
+ printf( ": %d\n" *(p + 1));
+	test_print();
+}

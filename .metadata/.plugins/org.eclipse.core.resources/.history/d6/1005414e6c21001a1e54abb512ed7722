@@ -1,0 +1,60 @@
+package com.java.blue_set;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Struct;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Form_2 extends JFrame {
+
+	private JPanel contentPane;
+
+	Struct add_data ()
+	{
+		
+	};
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Form_2 frame = new Form_2();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Form_2() {
+		final config_port cf_serial = new config_port();
+		getContentPane().setBackground(Color.WHITE);
+		setSize(new Dimension(500, 500));
+		setTitle("TEST_JAVA");
+		getContentPane().setLayout(null);
+
+		JButton btnNewButton = new JButton("SEND");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cf_serial.start_set();
+				System.out.println("OKSEND");
+			}
+		});
+
+		btnNewButton.setBounds(352, 52, 89, 23);
+		getContentPane().add(btnNewButton);
+	}
+
+}

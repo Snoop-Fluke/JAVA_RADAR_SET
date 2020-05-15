@@ -1,0 +1,31 @@
+package com.java.blue_set;
+
+import java.awt.EventQueue;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Form4 extends JFrame {
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Form4 frame = new Form4();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	public Form4() {
+		getContentPane().setLayout(null);
+
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setBounds(185, 322, 97, 25);
+		getContentPane().add(btnNewButton_1);
+
+	}
+}

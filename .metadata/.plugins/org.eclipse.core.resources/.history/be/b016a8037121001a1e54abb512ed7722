@@ -1,0 +1,11 @@
+package com.java.blue_set;
+
+class config_java {
+	public static final String PORT_NAMES[] = { "COM20" };
+	public static final int TIME_OUT = 5000;
+	public static final int DATA_RATE = 115200;
+}
+
+public class val_set {
+	public static String read_string = "HELLO";
+}

@@ -1,0 +1,95 @@
+package com.java.blue_set;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+public class Form1 extends JFrame {
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				Form1 form = new Form1();
+				form.setVisible(true);
+			}
+		});
+	}
+
+	public Form1() {
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(24, 67, 318, 274);
+		getContentPane().add(scrollPane);
+
+		JTextArea textArea_1 = new JTextArea();
+		scrollPane.setViewportView(textArea_1);
+
+		// ////////////////////////////////////////////////////////////////
+
+		final config_port cf_serial = new config_port();
+		getContentPane().setBackground(Color.WHITE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(new Dimension(500, 500));
+		setTitle("TEST_JAVA");
+		getContentPane().setLayout(null);
+		// //////////////////////////////////////////////////////////////////
+
+		JButton close_port = new JButton();
+		close_port.setText("close_port");
+		close_port.setBounds(352, 82, 89, 23);
+		close_port.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane.showMessageDialog(null, "ClosePort", "SerialPort",
+						1);
+				cf_serial.close();
+			}
+
+		});
+		getContentPane().add(close_port);
+		// /////////////////////////////////////////////////////////////
+
+		JButton open_port = new JButton();
+		open_port.setText("Open_port");
+		open_port.setBounds(352, 112, 89, 23);
+		open_port.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane
+						.showMessageDialog(null, "OpenPort", "SerialPort", 1);
+				cf_serial.initialize();
+			}
+
+		});
+		getContentPane().add(open_port);
+		// ///////////////////////////////////////////////////////////////
+		JButton config_val = new JButton("SET_VAL");
+		config_val.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Form_2 form_2 = new Form_2();
+				form_2.setVisible(true);
+			}
+		});
+		config_val.setBounds(352, 146, 89, 23);
+		getContentPane().add(config_val);
+
+		Thread t = new Thread() {
+			public void run() {
+
+				try {
+					Thread.sleep(1000000);
+				} catch (InterruptedException ie) {
+				}
+			}
+		};
+		t.start();
+		System.out.println("Started");
+		textArea_1.append(config_java.read_string);
+		System.out.println(config_java.read_string);
+	}
+}

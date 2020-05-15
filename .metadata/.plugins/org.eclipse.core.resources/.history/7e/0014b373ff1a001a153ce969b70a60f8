@@ -1,0 +1,48 @@
+package com.java.blue_set;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+public class Form1 {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	   public static void main(String []args) {
+		   String name = JOptionPane.showInputDialog(null,"what you name");
+		   int choice = JOptionPane.showConfirmDialog(null, "do you like,"+ name +"?");
+		   if (choice == JOptionPane.NO_OPTION)
+		   {
+			   JOptionPane.showMessageDialog(null, "OK_sir");
+			   
+		   }
+		   else
+		   {
+			   JOptionPane.showMessageDialog(null, "NOT_OK");
+		   }
+		   }
+	   static void test_loop()
+	   {
+		   JFrame frame = new JFrame();
+		   frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		   frame.setSize(new Dimension(500,500));
+		   frame.setTitle("TEST_JAVA");
+		   
+		   JButton button_1 = new JButton();
+		   button_1.setText("BUTTON_test");
+		   
+		button_1.setBackground(Color.BLUE);
+		   frame.add(button_1);
+		   
+		   frame.setVisible(true);
+		   
+	   }
+	}       

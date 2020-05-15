@@ -1,0 +1,78 @@
+package com.java.blue_set;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Form_2 extends JFrame {
+
+	// private JPanel contentPane;
+
+	private JTextField textField_2;
+	private JTextField textField_3;
+	final public static Form_2 frame = new Form_2();
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+
+					frame.setVisible(true);
+
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Form_2() {
+
+		// monitor _ Json
+		// final config_port cf_serial = new config_port();
+		getContentPane().setBackground(Color.WHITE);
+		setSize(new Dimension(500, 500));
+		setTitle("TEST_JAVA");
+		getContentPane().setLayout(null);
+
+		JLabel la1, la2;
+		la1 = new JLabel(config_java.get_Json[0]);
+		la1.setBounds(56, 53, 86, 20);
+		getContentPane().add(la1);
+
+		la2 = new JLabel(config_java.get_Json[1]);
+		la2.setBounds(76, 73, 106, 40);
+		getContentPane().add(la2);
+
+		System.out.println(config_java.get_Json[0]);
+		System.out.println("check");
+		// monitor _ Json
+
+		// textField_3 = new JTextField(config_java.val_2);
+		// textField_3.setBounds(56, 109, 86, 20);
+		// getContentPane().add(textField_3);
+		// textField_3.setColumns(10);
+
+		// textField_4 = new JTextField();
+		// textField_4.setBounds(56, 179, 86, 20);
+		// getContentPane().add(textField_4);
+		// textField_4.setColumns(10);
+		//
+		// textField_5 = new JTextField();
+		// textField_5.setBounds(56, 252, 86, 20);
+		// getContentPane().add(textField_5);
+		// textField_5.setColumns(10);
+		//
+		// textField_6 = new JTextField();
+		// textField_6.setBounds(56, 314, 86, 20);
+		// getContentPane().add(textField_6);
+		// textField_6.setColumns(10);
+	}
+}

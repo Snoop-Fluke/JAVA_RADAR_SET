@@ -1,0 +1,143 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef enum
+{
+        red,
+        green,
+        blue,
+        yellow,
+        magenta,
+        cyan,
+        orange,
+        violet
+
+}set_color_font;
+
+struct config_option
+{
+        short int ver_alert[2];
+        short int hor_alert[2];
+        int ver_alertLow2;
+        int hor_alertLow2;
+        char low_1[20];
+        char low_2[20];
+        set_color_font _set_color_font;
+} set_text_alert;
+
+
+struct R_G_B
+{
+        int _red;//set_color_RED
+        int _green;//set_color_GREEN
+        int _blue;//set_color_BLUE
+}R_G_B;
+
+int *set_color(struct R_G_B *rgb)
+{
+	rgb->_red = 100;
+	rgb->_green = 0;
+	rgb->_blue =0;
+    int *arr_color[4];
+        switch(0)
+        {
+        case red:
+        {
+
+        	*arr_color[0] = rgb->_red;
+        	*arr_color[1] =0;
+        	*arr_color[2] =0;
+
+                return (*arr_color);
+                break;
+        }
+        case green:
+        {
+
+        	*arr_color[0] = rgb->_red;
+        	        	*arr_color[1] =0;
+        	        	*arr_color[2] =0;
+
+        	                return (*arr_color);
+        	                break;
+        }
+        case blue:
+        {
+
+        	*arr_color[0] = rgb->_red;
+        	        	*arr_color[1] =0;
+        	        	*arr_color[2] =0;
+
+        	                return (*arr_color);
+        	                break;
+        }
+        case yellow:
+        {
+
+        	*arr_color[0] = rgb->_red;
+        	        	*arr_color[1] =0;
+        	        	*arr_color[2] =0;
+
+        	                return (*arr_color);
+        	                break;
+        }
+        case magenta:
+        {
+
+        	*arr_color[0] = rgb->_red;
+        	        	*arr_color[1] =0;
+        	        	*arr_color[2] =0;
+
+        	                return (*arr_color);
+        	                break;
+        }
+        case cyan:
+        {
+
+        	*arr_color[0] = rgb->_red;
+        	        	*arr_color[1] =0;
+        	        	*arr_color[2] =0;
+
+        	                return (*arr_color);
+        	                break;
+        }
+        case orange:
+        {
+
+        	*arr_color[0] = rgb->_red;
+        	        	*arr_color[1] =0;
+        	        	*arr_color[2] =0;
+
+        	                return (*arr_color);
+        	                break;
+        }
+        case violet:
+        {
+
+        	*arr_color[0] = rgb->_red;
+        	        	*arr_color[1] =0;
+        	        	*arr_color[2] =0;
+
+        	                return (*arr_color);
+        	                break;
+        }
+        default:
+        {
+
+        	*arr_color[0] = rgb->_red;
+        	        	*arr_color[1] =0;
+        	        	*arr_color[2] =0;
+
+        	                return (*arr_color);
+        	                break;
+        }
+        }
+}
+int main()
+{
+//	int *pppo;
+//	pppo = set_color(&R_G_B);
+
+//	printf("!!!Hello World!!!%d ",*p); /* prints !!!Hello World!!! */
+}

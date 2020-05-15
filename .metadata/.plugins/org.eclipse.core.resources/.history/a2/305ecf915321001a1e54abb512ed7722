@@ -1,0 +1,8 @@
+package com.java.blue_set;
+
+import gnu.io.SerialPort;
+
+public class config_port {
+	SerialPort serialport;
+
+}

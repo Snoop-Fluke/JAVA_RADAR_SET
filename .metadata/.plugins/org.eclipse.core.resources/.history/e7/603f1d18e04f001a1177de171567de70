@@ -1,0 +1,111 @@
+package com.java.blue_set;
+
+import gnu.io.CommPortIdentifier;
+import gnu.io.SerialPort;
+import gnu.io.SerialPortEvent;
+import gnu.io.SerialPortEventListener;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.util.Enumeration;
+
+import javax.swing.JOptionPane;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+public class config_port implements SerialPortEventListener {
+	SerialPort serialPort;
+	private BufferedReader input;
+	static OutputStream output;
+
+	public void initialize() {
+		CommPortIdentifier portId = null;
+		Enumeration portEnum = CommPortIdentifier.getPortIdentifiers();
+
+		while (portEnum.hasMoreElements()) {
+			CommPortIdentifier currPortId = (CommPortIdentifier) portEnum
+					.nextElement();
+			for (String portName : config_java.PORT_NAMES) {
+				if (currPortId.getName().equals(portName)) {
+					portId = currPortId;
+					break;
+				}
+			}
+		}
+		if (portId == null) {
+			System.out.println("Could not find COM port.");
+			return;
+		}
+
+		try {
+			// open serial port, and use class name for the appName.
+			serialPort = (SerialPort) portId.open(this.getClass().getName(),
+					config_java.TIME_OUT);
+
+			// set port parameters
+			serialPort.setSerialPortParams(config_java.DATA_RATE,
+					SerialPort.DATABITS_8, SerialPort.STOPBITS_1,
+					SerialPort.PARITY_NONE);
+
+			// open the streams
+			input = new BufferedReader(new InputStreamReader(
+					serialPort.getInputStream()));
+
+			output = serialPort.getOutputStream();
+			// add event listeners
+			serialPort.addEventListener(this);
+			serialPort.notifyOnDataAvailable(true);
+		} catch (Exception e) {
+			System.err.println(e.toString());
+		}
+	}
+
+	public void close() {
+		if (serialPort != null) {
+			serialPort.removeEventListener();
+			serialPort.close();
+
+		}
+	}
+
+	public void start_set() {
+		try {
+			byte[] b = config_java.Send_Json.getBytes();
+
+			output.write(b);
+
+		} catch (Exception e) {
+			System.err.println(e.toString());
+		}
+	}
+
+	public void msg_show() {
+		JOptionPane.showMessageDialog(null, "OpenPort", "SerialPort", 1);
+	}
+
+	public synchronized void serialEvent(SerialPortEvent oEvent) {
+
+		// Decode Json
+		JSONParser parser = new JSONParser();
+		if (oEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
+			try {
+				String inputLine = input.readLine() + "\n";
+				config_java.read_string = inputLine;
+				System.out.println(inputLine);
+				JSONObject jsonObject = (JSONObject) parser
+						.parse(config_java.read_string);
+				System.out.println(jsonObject);
+				config_java.get_Json[0] = (String) jsonObject.get("sensor");
+				config_java.get_Json[1] = (String) jsonObject.get("test");
+				System.out.println(config_java.get_Json[0]);
+				// System.out.println(config_java.read_string);
+			} catch (Exception e) {
+				// System.err.println(e.toString());
+			}
+		}
+
+	}
+
+}

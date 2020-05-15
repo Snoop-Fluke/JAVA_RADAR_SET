@@ -1,0 +1,158 @@
+package desktop.c;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import desktop.model.config_port;
+import desktop_view.config_page;
+
+public class config_menu implements ActionListener {
+
+	private config_page view;
+	private config_port model;
+	String test = "";
+	String[] cars = new String[6];
+
+	public config_menu(config_page view, config_port model) {
+		this.view = view;
+		this.model = model;
+		view.setVisible(true);
+		view.getBtn_write().setActionCommand("write");
+		view.getBtn_write().addActionListener(this);
+		view.getBtn_read().setActionCommand("read");
+		view.getBtn_read().addActionListener(this);
+
+		view.getCbb_color().setActionCommand("getcolor");
+		view.getCbb_color().addActionListener(this);
+
+		view.getCbb_txt_al().setActionCommand("gettext");
+		view.getCbb_txt_al().addActionListener(this);
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		String command = e.getActionCommand();
+
+		if (command.equals("getcolor")) {
+
+			int select = view.getCbb_color().getSelectedIndex();
+			switch (select) {
+			case 0:
+				cars[0] = "1a01";
+				System.out.println("it_RED");
+				model.put_json("set_color", "RED");
+				break;
+			case 1:
+				cars[0] = "1a02";
+				System.out.println("it_GREEN");
+				model.put_json("set_color", "GREEN");
+				break;
+			case 2:
+				cars[0] = "1a03";
+				System.out.println("it_YELLOW");
+				model.put_json("set_color", "YELLOW");
+				break;
+			}
+		}
+		if (command.equals("gettext")) {
+
+			int select = view.getCbb_txt_al().getSelectedIndex();
+			switch (select) {
+			case 0:
+				cars[1] = "2a01";
+				System.out.println("Slow down");
+				model.put_json("set_color", "Slow down");
+				break;
+			case 1:
+				cars[1] = "2a02";
+				System.out.println("please Slow");
+				model.put_json("set_color", "please Slow");
+				break;
+			case 2:
+				cars[1] = "2a03";
+				System.out.println("Slow Slow");
+				model.put_json("set_color", "Slow Slow");
+				break;
+			}
+		}
+
+		if (command.equals("write")) {
+			StringBuilder stringBuilder = new StringBuilder();
+
+			// for (int i = 0; i < cars.length; i++) {
+			// if (cars[i] != null) {
+			// stringBuilder.append(cars[i]);
+			// }
+			//
+			// }
+
+			int blink_ = Integer.parseInt(view.getBlink_set().getText().trim());
+			String blink = String.format("%02x", blink_);
+
+			int tm_mnt = Integer.parseInt(view.getTm_mnt().getText().trim());
+			String tm_mnt_ = String.format("%02x", tm_mnt);
+
+			int sp_lm = Integer.parseInt(view.getSp_lm().getText().trim());
+			String sp_lm_ = String.format("%02x", sp_lm);
+
+			int sp_st = Integer.parseInt(view.getSp_st().getText().trim());
+			String sp_st_ = String.format("%02x", sp_st);
+
+			System.out
+					.println("blink_set___" + model.hex_callback(blink, "3a"));
+			System.out.println("blink_set :" + model.txtbox_set(blink_, 60));
+			System.out.println("blink_set :" + model.txtbox_set(tm_mnt, 60));
+			System.out.println("blink_set :" + model.txtbox_set(sp_lm, 250));
+			System.out.println("blink_set :" + model.txtbox_set(sp_st, 150));
+
+			cars[2] = model.hex_callback(blink, "3a");
+			cars[3] = model.hex_callback(tm_mnt_, "4a");
+			cars[4] = model.hex_callback(sp_lm_, "5a");
+			cars[5] = model.hex_callback(sp_st_, "6a");
+
+			String Hex_set = model.hex_protocol(stringBuilder, cars);
+			System.out.println(Hex_set);
+
+			// //////////////////Decode
+			char[] convert = Hex_set.toCharArray();
+
+			for (int i = 0; i < convert.length; i++) {
+
+				// if (convert[i] == '3' && convert[i + 1] == 'a') {
+				// i += 2;
+				// System.out.print("result :" + convert[i]);
+				// System.out.println(convert[i + 1]);
+				// }
+				System.out.println("model_result :"
+						+ model.decode_hex(convert, i));
+				if (convert[i] == '3' && convert[i + 1] == 'a') {
+					i += 2;
+					System.out.print("result :" + convert[i]);
+					System.out.println(convert[i + 1]);
+				}
+				if (convert[i] == '4' && convert[i + 1] == 'a') {
+					i += 2;
+					System.out.print("result :" + convert[i]);
+					System.out.println(convert[i + 1]);
+				}
+				if (convert[i] == '5' && convert[i + 1] == 'a') {
+					i += 2;
+					System.out.print("result :" + convert[i]);
+					System.out.println(convert[i + 1]);
+				}
+			}
+			// //////////////////Decode
+			// String getdata = view.getBlink_set().getText().trim();
+			// model.put_json("Test", "Write");
+			// model.send_json();
+			// System.out.println(getdata);
+		}
+
+		// } else {
+		// Json.send_json();
+		// System.out.println("EIEI");
+		// }
+	}
+}

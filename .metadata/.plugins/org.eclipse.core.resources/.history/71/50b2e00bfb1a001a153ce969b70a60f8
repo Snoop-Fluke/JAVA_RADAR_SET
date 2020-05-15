@@ -1,0 +1,29 @@
+package com.java.blue_set;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+public class Form1 {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	   public static void main(String []args) {
+		   String name = JOptionPane.showInputDialog(null,"what you name");
+		   int choice = JOptionPane.showConfirmDialog(null, "do you like,"+ name +"?");
+		   if (choice == JOptionPane.YES_OPTION)
+		   {
+			   JOptionPane.showMessageDialog(null, "OK_sir");
+			   
+		   }
+		   else
+		   {
+			   JOptionPane.showMessageDialog(null, "NOT_OK");
+		   }
+		   }
+	}       

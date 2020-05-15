@@ -1,0 +1,289 @@
+package com.java.blue_set;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.io.StringWriter;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+import org.json.simple.JSONObject;
+
+import com.java.blue_set.config_java.COLOR;
+
+public class Form1 extends JFrame {
+	final config_port cf_serial = new config_port();
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				Form1 form = new Form1();
+				form.setVisible(true);
+				System.out.println("Started");
+			}
+		});
+	}
+
+	JSONObject obj = new JSONObject();
+
+	public Form1() {
+		// ////////////////////////////////////////////////////////////////
+
+		getContentPane().setBackground(Color.WHITE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(new Dimension(500, 500));
+		setTitle("TEST_JAVA");
+		getContentPane().setLayout(null);
+
+		// //////////////////////////////////////////////////////////////////
+		JButton close_port = new JButton();
+		close_port.setText("close_port");
+		close_port.setBounds(352, 82, 89, 23);
+		close_port.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				JScrollPane scrollPane = new JScrollPane();
+				scrollPane.setBounds(24, 67, 318, 274);
+				getContentPane().add(scrollPane);
+
+				JTextArea textArea_1 = new JTextArea();
+				scrollPane.setViewportView(textArea_1);
+				textArea_1.append(config_java.read_string);
+				// System.out.println(config_java.read_string);
+
+			}
+
+		});
+		getContentPane().add(close_port);
+		// /////////////////////////////////////////////////////////////
+
+		JButton open_port = new JButton();
+		open_port.setText("Open_port");
+		open_port.setBounds(352, 112, 89, 23);
+		open_port.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				cf_serial.initialize();
+				JOptionPane
+						.showMessageDialog(null, "OpenPort", "SerialPort", 1);
+			}
+
+		});
+
+		getContentPane().add(open_port);
+		// System.out.println(config_java.read_string);
+
+		// /////////////////////////////////////////////////////////////////////
+		JButton config_val = new JButton("SET_VAL");
+		config_val.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				StringWriter out = new StringWriter();
+				try {
+					obj.writeJSONString(out);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				config_java.Send_Json = out.toString();
+				cf_serial.start_set();
+				System.out.println(config_java.Send_Json);
+
+			}
+		});
+		config_val.setBounds(352, 146, 89, 23);
+		getContentPane().add(config_val);
+		// //////////////////////////////////////////////////////////////
+		JButton btnReadserial = new JButton(" READ_SERIAL");
+		btnReadserial.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				Form_2 form_2 = new Form_2();
+				form_2.setVisible(true);
+
+			}
+		});
+		btnReadserial.setBounds(326, 199, 115, 29);
+		getContentPane().add(btnReadserial);
+
+		// ///////////JComboBox///////////////
+		final JComboBox comboBox = new JComboBox(COLOR.values());
+		comboBox.setBounds(34, 272, 100, 26);
+		getContentPane().add(comboBox);
+
+		final JComboBox comboBox_1 = new JComboBox(COLOR.values());
+		comboBox_1.setBounds(149, 272, 86, 26);
+		getContentPane().add(comboBox_1);
+
+		final JComboBox comboBox_2 = new JComboBox(COLOR.values());
+		comboBox_2.setBounds(250, 272, 83, 26);
+		getContentPane().add(comboBox_2);
+
+		final JComboBox comboBox_3 = new JComboBox(COLOR.values());
+		comboBox_3.setBounds(352, 272, 89, 26);
+		getContentPane().add(comboBox_3);
+
+		final JComboBox comboBox_4 = new JComboBox(COLOR.values());
+		comboBox_4.setBounds(250, 349, 83, 26);
+		getContentPane().add(comboBox_4);
+
+		final JComboBox comboBox_5 = new JComboBox(COLOR.values());
+		comboBox_5.setBounds(352, 349, 89, 26);
+		getContentPane().add(comboBox_5);
+
+		final JComboBox comboBox_6 = new JComboBox(COLOR.values());
+		comboBox_6.setBounds(34, 217, 100, 26);
+		getContentPane().add(comboBox_6);
+
+		final JComboBox comboBox_7 = new JComboBox(COLOR.values());
+		comboBox_7.setBounds(149, 217, 86, 26);
+		getContentPane().add(comboBox_7);
+
+		final JComboBox comboBox_8 = new JComboBox(COLOR.values());
+		comboBox_8.setBounds(29, 326, 105, 26);
+		getContentPane().add(comboBox_8);
+
+		final JComboBox comboBox_9 = new JComboBox(COLOR.values());
+		comboBox_9.setBounds(149, 326, 86, 26);
+		getContentPane().add(comboBox_9);
+
+		comboBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(comboBox.getItemAt(comboBox
+						.getSelectedIndex()));
+				config_java.Config_command[0] = comboBox.getSelectedIndex();
+				obj.put("comboBox", config_java.Config_command[0]);
+				System.out.println(config_java.Config_command[0]);
+
+			}
+		});
+
+		comboBox_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(comboBox_1.getItemAt(comboBox_1
+						.getSelectedIndex()));
+				config_java.Config_command[1] = comboBox_1.getSelectedIndex();
+				obj.put("Col_1", config_java.Config_command[1]);
+
+				System.out.println(config_java.Config_command[1]);
+			}
+		});
+
+		comboBox_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(comboBox_2.getItemAt(comboBox_2
+						.getSelectedIndex()));
+				config_java.Config_command[2] = comboBox_2.getSelectedIndex();
+				obj.put("Col_2", config_java.Config_command[2]);
+				System.out.println(config_java.Config_command[2]);
+			}
+		});
+
+		comboBox_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(comboBox_3.getItemAt(comboBox_3
+						.getSelectedIndex()));
+				config_java.Config_command[3] = comboBox_3.getSelectedIndex();
+				obj.put("Sp_St", config_java.Config_command[3]);
+				System.out.println(config_java.Config_command[3]);
+
+			}
+		});
+
+		comboBox_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(comboBox_4.getItemAt(comboBox_4
+						.getSelectedIndex()));
+				config_java.Config_command[4] = comboBox_4.getSelectedIndex();
+				obj.put("Sp_Lt", config_java.Config_command[4]);
+				System.out.println(config_java.Config_command[4]);
+			}
+		});
+
+		comboBox_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(comboBox_5.getItemAt(comboBox_5
+						.getSelectedIndex()));
+				config_java.Config_command[5] = comboBox_5.getSelectedIndex();
+				obj.put("Ti_Mt", config_java.Config_command[5]);
+				System.out.println(config_java.Config_command[5]);
+
+			}
+		});
+
+		comboBox_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(comboBox_6.getItemAt(comboBox_6
+						.getSelectedIndex()));
+				config_java.Config_command[6] = comboBox_6.getSelectedIndex();
+				obj.put("Al_Bl", config_java.Config_command[6]);
+				System.out.println(config_java.Config_command[6]);
+
+			}
+		});
+
+		comboBox_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(comboBox_7.getItemAt(comboBox_7
+						.getSelectedIndex()));
+				config_java.Config_command[7] = comboBox_7.getSelectedIndex();
+				obj.put("Ti_Dt", config_java.Config_command[7]);
+				System.out.println(config_java.Config_command[7]);
+
+			}
+		});
+
+		comboBox_8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(comboBox_8.getItemAt(comboBox_8
+						.getSelectedIndex()));
+				config_java.Config_command[5] = comboBox_8.getSelectedIndex();
+				obj.put("Ft_St", config_java.Config_command[8]);
+				System.out.println(config_java.Config_command[8]);
+
+			}
+		});
+		//
+		// comboBox_9.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent e) {
+		// System.out.println(comboBox_9.getItemAt(comboBox_9
+		// .getSelectedIndex()));
+		// config_java.Config_command[5] = comboBox_9.getSelectedIndex();
+		// obj.put("Ti_Mt", config_java.Config_command[4]);
+		// System.out.println(config_java.Config_command[5]);
+		//
+		// }
+		// });
+
+		JButton btnSave = new JButton("SAVE");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				System.out.print("SAVE_CONFIG");
+			}
+		});
+		btnSave.setBounds(61, 368, 115, 29);
+		getContentPane().add(btnSave);
+
+		// //////////////////////////////////////////////////////////////
+		Thread t = new Thread() {
+			public void run() {
+
+				try {
+					Thread.sleep(1000000);
+				} catch (InterruptedException ie) {
+				}
+			}
+		};
+		t.start();
+
+	}
+}

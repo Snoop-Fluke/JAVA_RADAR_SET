@@ -1,0 +1,191 @@
+package com.java.blue_set;
+
+import gnu.io.CommPortIdentifier;
+import gnu.io.SerialPort;
+import gnu.io.SerialPortEvent;
+import gnu.io.SerialPortEventListener;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.util.Enumeration;
+
+import javax.swing.AbstractButton;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class Form1 extends JFrame implements SerialPortEventListener {
+	SerialPort serialPort;
+	private static final String PORT_NAMES[] = { "COM20" };
+	private BufferedReader input;
+	static OutputStream output;
+	private static final int TIME_OUT = 5000;
+	private static final int DATA_RATE = 115200;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				Form1 form = new Form1();
+				form.setVisible(true);
+			}
+		});
+	}
+
+	protected JTextArea textArea;
+	public JTextArea textArea1;
+	protected AbstractButton m_shTxt;
+	private JTextField textField;
+
+	public void initialize() {
+		CommPortIdentifier portId = null;
+		Enumeration portEnum = CommPortIdentifier.getPortIdentifiers();
+
+		while (portEnum.hasMoreElements()) {
+			CommPortIdentifier currPortId = (CommPortIdentifier) portEnum
+					.nextElement();
+			for (String portName : PORT_NAMES) {
+				if (currPortId.getName().equals(portName)) {
+					portId = currPortId;
+					break;
+				}
+			}
+		}
+		if (portId == null) {
+			System.out.println("Could not find COM port.");
+			return;
+		}
+
+		try {
+			// open serial port, and use class name for the appName.
+			serialPort = (SerialPort) portId.open(this.getClass().getName(),
+					TIME_OUT);
+
+			// set port parameters
+			serialPort.setSerialPortParams(DATA_RATE, SerialPort.DATABITS_8,
+					SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
+
+			// open the streams
+			input = new BufferedReader(new InputStreamReader(
+					serialPort.getInputStream()));
+
+			output = serialPort.getOutputStream();
+			char ch = 99;
+			output.write(ch);
+			ch = 1;
+			output.write(ch);
+			ch = 2;
+			output.write(ch);
+			ch = 3;
+			output.write(ch);
+
+			// add event listeners
+			serialPort.addEventListener(this);
+			serialPort.notifyOnDataAvailable(true);
+		} catch (Exception e) {
+			System.err.println(e.toString());
+		}
+	}
+
+	public synchronized void close() {
+		if (serialPort != null) {
+			serialPort.removeEventListener();
+			serialPort.close();
+
+		}
+	}
+
+	public synchronized void serialEvent(SerialPortEvent oEvent) {
+
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(24, 67, 318, 274);
+		getContentPane().add(scrollPane);
+
+		JTextArea textArea_1 = new JTextArea();
+		scrollPane.setViewportView(textArea_1);
+		// getContentPane().add(textArea_1);
+
+		 if (oEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
+		 try {
+		 String inputLine = input.readLine() + "\n";
+		 textArea_1.append(inputLine);
+		 System.out.println(inputLine);
+		 } catch (Exception e) {
+		 System.err.println(e.toString());
+		 }
+		 }
+		// Ignore all the other eventTypes, but you should consider the other
+		// ones.
+	}
+
+	public Form1() {
+
+		getContentPane().setBackground(Color.WHITE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(new Dimension(500, 500));
+		setTitle("TEST_JAVA");
+		getContentPane().setLayout(null);
+
+		JButton btnNewButton = new JButton("SEND");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+
+					char ch = 99;
+					output.write(ch);
+					ch = 52;
+					output.write(ch);
+					ch = 2;
+					output.write(ch);
+					ch = 3;
+					output.write(ch);
+					System.out.println("SEND OK");
+				} catch (IOException e) {
+
+					e.printStackTrace();
+				}
+
+			}
+		});
+		btnNewButton.setBounds(352, 52, 89, 23);
+		getContentPane().add(btnNewButton);
+
+		JButton close_port = new JButton();
+		close_port.setText("close_port");
+		close_port.setBounds(352, 82, 89, 23);
+		close_port.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane.showMessageDialog(null, "ClosePort", "SerialPort",
+						1);
+				close();
+			}
+
+		});
+		getContentPane().add(close_port);
+
+		initialize();
+		Thread t = new Thread() {
+			public void run() {
+				// the following line will keep this app alive for 1000 seconds,
+				// waiting for events to occur and responding to them (printing
+				// incoming messages to console).
+				try {
+					Thread.sleep(1000000);
+				} catch (InterruptedException ie) {
+				}
+			}
+		};
+		t.start();
+		System.out.println("Started");
+
+	}
+}

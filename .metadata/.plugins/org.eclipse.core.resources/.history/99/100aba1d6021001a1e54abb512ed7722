@@ -1,0 +1,118 @@
+package com.java.blue_set;
+
+import gnu.io.SerialPort;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.OutputStream;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class Form1 extends JFrame {
+	SerialPort serialPort;
+
+	private BufferedReader input;
+	static OutputStream output;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				Form1 form = new Form1();
+				form.setVisible(true);
+			}
+		});
+	}
+
+	public Form1() {
+
+		config_port cf_serial = new config_port();
+
+		getContentPane().setBackground(Color.WHITE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(new Dimension(500, 500));
+		setTitle("TEST_JAVA");
+		getContentPane().setLayout(null);
+
+		JButton btnNewButton = new JButton("SEND");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+
+					char ch = 99;
+					output.write(ch);
+					ch = 52;
+					output.write(ch);
+					ch = 2;
+					output.write(ch);
+					ch = 3;
+					output.write(ch);
+					System.out.println("SEND OK");
+				} catch (IOException e) {
+
+					e.printStackTrace();
+				}
+
+			}
+		});
+		btnNewButton.setBounds(352, 52, 89, 23);
+		getContentPane().add(btnNewButton);
+
+		JButton close_port = new JButton();
+		close_port.setText("close_port");
+		close_port.setBounds(352, 82, 89, 23);
+		close_port.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane.showMessageDialog(null, "ClosePort", "SerialPort",
+						1);
+				cf_serial.close();
+			}
+
+		});
+		getContentPane().add(close_port);
+
+		JButton open_port = new JButton();
+		open_port.setText("Open_port");
+		open_port.setBounds(352, 112, 89, 23);
+		open_port.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane
+						.showMessageDialog(null, "OpenPort", "SerialPort", 1);
+				cf_serial.initialize();
+			}
+
+		});
+		getContentPane().add(open_port);
+
+		JButton config_val = new JButton("SET_VAL");
+		config_val.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Form_2 form_2 = new Form_2();
+				form_2.setVisible(true);
+			}
+		});
+		config_val.setBounds(352, 146, 89, 23);
+		getContentPane().add(config_val);
+
+		Thread t = new Thread() {
+			public void run() {
+				// the following line will keep this app alive for 1000 seconds,
+				// waiting for events to occur and responding to them (printing
+				// incoming messages to console).
+				try {
+					Thread.sleep(1000000);
+				} catch (InterruptedException ie) {
+				}
+			}
+		};
+		t.start();
+		System.out.println("Started");
+
+	}
+}

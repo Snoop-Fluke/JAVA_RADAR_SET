@@ -1,0 +1,153 @@
+
+
+import java.io.*;
+import java.util.*;
+
+import gnu.io.*;
+
+import javax.swing.SwingUtilities;
+
+
+public class Form1 implements SerialPortEventListener {
+    int i=1;
+    static CommPortIdentifier portId;
+    InputStream inputStream;
+    SerialPort serialPort;
+    static String messageString = "Hello Serial";  // ข้อมูลที่จะทดลองส่งออกจากพอร์ตอนุกรม
+    static OutputStream outputStream;
+    String port="COM3";
+    int baudrate= 9600;
+
+  public String temp = "";
+};
+
+ConnectSerial();
+
+serialPort.close();
+
+
+        try {
+            // write string to serial port
+            outputStream.write(messageString.getBytes());
+        } catch (IOException e) {
+        }
+
+@Override
+    public void run() {
+        try {
+            Thread.sleep(20000);
+        } catch (InterruptedException e) {}
+
+    }
+    @Override
+ public void serialEvent(SerialPortEvent event) {
+      switch(event.getEventType()) {
+        case SerialPortEvent.BI:
+        case SerialPortEvent.OE:
+        case SerialPortEvent.FE:
+        case SerialPortEvent.PE:
+        case SerialPortEvent.CD:
+        case SerialPortEvent.CTS:
+        case SerialPortEvent.DSR:
+        case SerialPortEvent.RI:
+        case SerialPortEvent.OUTPUT_BUFFER_EMPTY:
+        break;
+        case SerialPortEvent.DATA_AVAILABLE:
+           ReadData();
+        break;
+        }
+    }
+
+    private void ConnectSerial() {
+     // initalize serial port
+        try {
+            portId = CommPortIdentifier.getPortIdentifier(port);
+        } catch (Exception exception) {
+        }
+
+
+
+        try {
+            serialPort = (SerialPort) portId.open("Test232", 2000);
+        } catch (PortInUseException e) {
+        }
+
+        try {
+            outputStream = serialPort.getOutputStream();
+        } catch (Exception exception) {
+        }
+
+
+
+        try {
+            inputStream = serialPort.getInputStream();
+        } catch (IOException e) {
+        }
+
+        try {
+            serialPort.addEventListener(this);
+        } catch (TooManyListenersException e) {
+        }
+
+        // activate the DATA_AVAILABLE notifier
+        serialPort.notifyOnDataAvailable(true);
+
+        try {
+            // set port parameters
+            serialPort.setSerialPortParams(baudrate, SerialPort.DATABITS_8,
+                    SerialPort.STOPBITS_1,
+                    SerialPort.PARITY_NONE);
+        } catch (UnsupportedCommOperationException e) {
+        }
+
+    }  
+   
+    public void ReadData(){
+ // runs this if data has been received
+  /*   try {
+
+         int nb = inputStream.available();
+
+         while (nb > 0) {
+
+             byte[] readBuffer = new byte[nb];
+             inputStream.read(readBuffer);
+             String str = new String(readBuffer);
+             jTextArea1.append(str);
+             m_shTxt.setText(str);
+            
+         //    jTextArea1.append("aaaaa");
+            
+          
+             nb = inputStream.available();
+
+         }
+
+    } catch (IOException e) {}
+ */
+
+      try {
+                    /**if command available hardware respone data here**/
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "tis-620"));
+                    String line = "";
+                  
+                    while ((line = reader.readLine()) != null) {
+                      
+                        if (line.length() > 0) {
+  
+                                final String testline = line;
+                                SwingUtilities.invokeLater(new Runnable() {
+                                   public void run() {
+                                       Object m_shTxt;
+									m_shTxt.setText(Integer.toString(i));
+                                        jTextArea1.append(testline + "\n");
+                                         i++;
+                                   }
+                                });
+       
+                        }
+                    }
+                } catch (IOException e) {
+                }
+               // break;
+            }

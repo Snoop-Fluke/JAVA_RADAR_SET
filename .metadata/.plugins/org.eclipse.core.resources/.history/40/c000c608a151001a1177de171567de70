@@ -1,0 +1,261 @@
+package com.java.blue_set;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.io.StringWriter;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+import org.json.simple.JSONObject;
+
+public class Form1 extends JFrame {
+	final config_port cf_serial = new config_port();
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				Form1 form = new Form1();
+				form.setVisible(true);
+				System.out.println("Started");
+			}
+		});
+	}
+
+	JSONObject obj = new JSONObject();
+
+	public Form1() {
+		// ////////////////////////////////////////////////////////////////
+
+		getContentPane().setBackground(Color.WHITE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(new Dimension(500, 500));
+		setTitle("TEST_JAVA");
+		getContentPane().setLayout(null);
+
+		// //////////////////////////////////////////////////////////////////
+		JButton close_port = new JButton();
+		close_port.setText("debug");
+		close_port.setBounds(352, 44, 89, 23);
+		close_port.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				JScrollPane scrollPane = new JScrollPane();
+				scrollPane.setBounds(24, 67, 318, 274);
+				getContentPane().add(scrollPane);
+
+				JTextArea textArea_1 = new JTextArea();
+				scrollPane.setViewportView(textArea_1);
+				// while (true) {
+				textArea_1.append(config_java.read_string);
+				// }
+
+			}
+
+		});
+		getContentPane().add(close_port);
+		// System.out.println(config_java.read_string);
+
+		// /////////////////////////////////////////////////////////////////////
+		JButton config_val = new JButton("SET_VAL");
+		config_val.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				StringWriter out = new StringWriter();
+				try {
+					obj.writeJSONString(out);
+				} catch (IOException e1) {
+
+					e1.printStackTrace();
+				}
+				config_java.Send_Json = out.toString();
+				cf_serial.start_set();
+				System.out.println(config_java.Send_Json);
+
+				// if (config_java.read_string == "") {
+				// cf_serial.msg_show("noti", "nulldata");
+				// }
+
+			}
+		});
+		config_val.setBounds(352, 16, 89, 23);
+		getContentPane().add(config_val);
+		// //////////////////////////////////////////////////////////////
+		JButton btnReadserial = new JButton(" READ_SERIAL");
+		btnReadserial.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				Form_2 form_2 = new Form_2();
+				form_2.setVisible(true);
+
+			}
+		});
+		btnReadserial.setBounds(326, 79, 115, 29);
+		getContentPane().add(btnReadserial);
+		String color[] = { "", "RED", "YELLOW", "GREEN", "BLUE" };
+		JLabel lblSetcolor = new JLabel("Set_color");
+		lblSetcolor.setBounds(45, 191, 69, 20);
+		getContentPane().add(lblSetcolor);
+
+		JLabel lblAlertcolor = new JLabel("Alert_color");
+		lblAlertcolor.setBounds(144, 191, 89, 20);
+		getContentPane().add(lblAlertcolor);
+		JLabel lblSpeedlimit = new JLabel("speed_limit");
+		lblSpeedlimit.setBounds(248, 191, 89, 20);
+		getContentPane().add(lblSpeedlimit);
+		JLabel lblSpeedalert = new JLabel("speed_alert");
+		lblSpeedalert.setBounds(352, 191, 89, 20);
+		getContentPane().add(lblSpeedalert);
+		JLabel lblSpeedstart = new JLabel("speed_start");
+		lblSpeedstart.setBounds(25, 259, 89, 20);
+		getContentPane().add(lblSpeedstart);
+
+		JLabel lblBlink = new JLabel("Blink");
+		lblBlink.setBounds(165, 259, 43, 20);
+		getContentPane().add(lblBlink);
+		JLabel lblTextalert = new JLabel("text_alert");
+		lblTextalert.setBounds(258, 259, 89, 20);
+		getContentPane().add(lblTextalert);
+
+		final JComboBox Set_color = new JComboBox();
+		Set_color.setBounds(258, 217, 69, 26);
+		getContentPane().add(Set_color);
+
+		final JComboBox Alert_color = new JComboBox();
+		Alert_color.setBounds(367, 217, 69, 26);
+		getContentPane().add(Alert_color);
+
+		final JComboBox Speed_limit = new JComboBox();
+		Speed_limit.setBounds(34, 280, 69, 26);
+		getContentPane().add(Speed_limit);
+
+		final JComboBox Speed_alert = new JComboBox();
+		Speed_alert.setBounds(144, 280, 69, 26);
+		getContentPane().add(Speed_alert);
+
+		final JComboBox Speed_start = new JComboBox(new Object[] {});
+		Speed_start.setBounds(258, 280, 86, 26);
+		getContentPane().add(Speed_start);
+
+		final JComboBox Blink = new JComboBox(color);
+		Blink.setBounds(34, 217, 100, 26);
+		getContentPane().add(Blink);
+
+		final JComboBox text_alert = new JComboBox(color);
+		text_alert.setBounds(144, 217, 86, 26);
+		getContentPane().add(text_alert);
+
+		Set_color.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(Set_color.getItemAt(Set_color
+						.getSelectedIndex()));
+				config_java.Config_command[0] = Set_color.getSelectedIndex();
+				obj.put("Al_Bl", config_java.Config_command[0]);
+				System.out.println(config_java.Config_command[0]);
+
+			}
+		});
+
+		Alert_color.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(Alert_color.getItemAt(Alert_color
+						.getSelectedIndex()));
+				config_java.Config_command[1] = Alert_color.getSelectedIndex();
+				obj.put("Ti_Dt", config_java.Config_command[1]);
+				System.out.println(config_java.Config_command[1]);
+
+			}
+		});
+		Speed_limit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(Speed_limit.getItemAt(Speed_limit
+						.getSelectedIndex()));
+				config_java.Config_command[2] = Speed_limit.getSelectedIndex();
+				obj.put("Ti_Dt", config_java.Config_command[2]);
+				System.out.println(config_java.Config_command[2]);
+
+			}
+		});
+		Speed_alert.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(Speed_alert.getItemAt(Speed_alert
+						.getSelectedIndex()));
+				config_java.Config_command[3] = Speed_alert.getSelectedIndex();
+				obj.put("Ti_Dt", config_java.Config_command[3]);
+				System.out.println(config_java.Config_command[3]);
+
+			}
+		});
+		Speed_start.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(Speed_start.getItemAt(Speed_start
+						.getSelectedIndex()));
+				config_java.Config_command[4] = Speed_start.getSelectedIndex();
+				obj.put("Ti_Dt", config_java.Config_command[4]);
+				System.out.println(config_java.Config_command[4]);
+
+			}
+		});
+		Blink.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(Blink.getItemAt(Blink.getSelectedIndex()));
+				config_java.Config_command[5] = Blink.getSelectedIndex();
+				obj.put("Ti_Dt", config_java.Config_command[5]);
+				System.out.println(config_java.Config_command[5]);
+
+			}
+		});
+		text_alert.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(text_alert.getItemAt(text_alert
+						.getSelectedIndex()));
+				config_java.Config_command[6] = text_alert.getSelectedIndex();
+				obj.put("Ti_Dt", config_java.Config_command[6]);
+				System.out.println(config_java.Config_command[6]);
+
+			}
+		});
+		//
+		// comboBox_9.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent e) {
+		// System.out.println(comboBox_9.getItemAt(comboBox_9
+		// .getSelectedIndex()));
+		// config_java.Config_command[5] = comboBox_9.getSelectedIndex();
+		// obj.put("Ti_Mt", config_java.Config_command[4]);
+		// System.out.println(config_java.Config_command[5]);
+		//
+		// }
+		// });
+
+		JButton btnSave = new JButton("SAVE");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				System.out.print("SAVE_CONFIG");
+			}
+		});
+		btnSave.setBounds(61, 368, 115, 29);
+		getContentPane().add(btnSave);
+
+		// //////////////////////////////////////////////////////////////
+		Thread t = new Thread() {
+			public void run() {
+
+				try {
+					Thread.sleep(1000000);
+				} catch (InterruptedException ie) {
+				}
+			}
+		};
+		t.start();
+
+	}
+}

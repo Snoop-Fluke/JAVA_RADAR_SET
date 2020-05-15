@@ -1,0 +1,192 @@
+package desktop.model;
+
+import gnu.io.CommPortIdentifier;
+import gnu.io.SerialPort;
+import gnu.io.SerialPortEvent;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StringWriter;
+
+import javax.swing.JOptionPane;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+public class config_port extends config_para {
+
+	JSONObject obj = new JSONObject();
+
+	public String init_port() {
+		String get_port = null;
+		portEnum = CommPortIdentifier.getPortIdentifiers();
+		while (portEnum.hasMoreElements()) {
+
+			CommPortIdentifier currPortId = (CommPortIdentifier) portEnum
+					.nextElement();
+			get_port = currPortId.getName();
+
+		}
+		return get_port;
+	}
+
+	public void initialize() {
+
+		portEnum = CommPortIdentifier.getPortIdentifiers();
+		while (portEnum.hasMoreElements()) {
+			CommPortIdentifier currPortId = (CommPortIdentifier) portEnum
+					.nextElement();
+			System.out.print("Port __" + currPortId.getName());
+			super.PORT_NAMES[0] = currPortId.getName();
+			for (String portName : PORT_NAMES) {
+				if (currPortId.getName().equals(portName)) {
+					portId = currPortId;
+
+					break;
+				}
+			}
+		}
+
+		if (portId == null) {
+			System.out.println("Could not find COM port.");
+			msg_show("PLEASE_CHECK_PORT", "ERRROR");
+		} else {
+			msg_show("OPEN PORT :" + super.PORT_NAMES[0], "ALEART");
+		}
+
+		try {
+			// open serial port, and use class name for the appName.
+			serialPort = (SerialPort) portId.open(this.getClass().getName(),
+					TIME_OUT);
+
+			// set port parameters
+			serialPort.setSerialPortParams(DATA_RATE, SerialPort.DATABITS_8,
+					SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
+
+			// open the streams
+			input = new BufferedReader(new InputStreamReader(
+					serialPort.getInputStream()));
+
+			output = serialPort.getOutputStream();
+			// add event listeners
+			serialPort.addEventListener(this);
+			serialPort.notifyOnDataAvailable(true);
+		} catch (Exception e) {
+			System.err.println(e.toString());
+		}
+
+	}
+
+	public void close() {
+		if (serialPort != null) {
+			serialPort.removeEventListener();
+			serialPort.close();
+
+		}
+	}
+
+	public void start_set() {
+		try {
+
+			byte[] b = Send_Json.getBytes();
+			output.write(b);
+
+		} catch (Exception e) {
+			System.err.println(e.toString());
+		}
+	}
+
+	public void send_json() {
+		StringWriter out = new StringWriter();
+		try {
+			obj.writeJSONString(out);
+		} catch (IOException e1) {
+
+			e1.printStackTrace();
+		}
+		config_para.Send_Json = out.toString();
+		// start_set();
+		System.out.println(config_para.Send_Json);
+		config_para.Send_Json = null;
+	}
+
+	public void put_json(String topic, String command) {
+		obj.put(topic, command);
+
+	}
+
+	public void pop_json() {
+		obj.clear();
+	}
+
+	public void msg_show(String title, String msg) {
+		JOptionPane.showMessageDialog(null, title, msg, 1);
+	}
+
+	public synchronized void serialEvent(SerialPortEvent oEvent) {
+
+		// Decode Json
+		JSONParser parser = new JSONParser();
+		if (oEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
+			try {
+				String inputLine = input.readLine() + "\n";
+				read_string = inputLine;
+				System.out.println(inputLine);
+				JSONObject jsonObject = (JSONObject) parser
+						.parse(config_para.read_string);
+				System.out.println(jsonObject);
+				get_Json[0] = (String) jsonObject.get("sensor");
+				get_Json[1] = (String) jsonObject.get("test");
+				System.out.println(get_Json[0]);
+				// System.out.println(read_string);
+			} catch (Exception e) {
+				// System.err.println(e.toString());
+			}
+		}
+
+	}
+
+	public int txtbox_set(int i, int j) {
+		if (i > j) {
+			i = j;
+		}
+		return i;
+	}
+
+	public String hex_callback(String txt, String hex_command) {
+
+		String re_data = hex_command.concat(txt);
+
+		return re_data;
+	}
+
+	public String hex_protocol(StringBuilder stringBuilder, String[] data_get) {
+		for (int i = 0; i < data_get.length; i++) {
+			if (data_get[i] != null) {
+				stringBuilder.append(data_get[i]);
+			}
+
+		}
+		return stringBuilder.toString();
+	}
+
+	public String get_hex(int hex_int) {
+		return String.format("%02x", hex_int);
+	}
+
+	public String decode_hex(String hex, int i) {
+
+		char[] convert = hex.toCharArray();
+
+		if (convert[i] == '4' && convert[i + 1] == 'a') {
+			System.out.print("THIS_I" + i);
+			i += 2;
+			System.out.print("result :" + convert[i]);
+			System.out.println(convert[i + 1]);
+		}
+		String de_hex = String.valueOf(convert[i-2]+convert[i]);
+		return de_hex;
+	}
+
+}

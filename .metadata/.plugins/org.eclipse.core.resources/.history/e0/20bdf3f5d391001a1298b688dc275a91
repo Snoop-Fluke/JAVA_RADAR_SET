@@ -1,0 +1,41 @@
+package desktop.c;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import desktop.model.config_port;
+import desktop_view.Select_page;
+import desktop_view.config_page;
+import desktop_view.connectport_view;
+
+public class select_menu implements ActionListener {
+	private Select_page view;
+
+	public select_menu(Select_page view) {
+		this.view = view;
+		view.setVisible(true);
+		view.getCon_mode().setActionCommand("port");
+		view.getCon_mode().addActionListener(this);
+		view.getConfig_mode().setActionCommand("comfig_mode");
+		view.getConfig_mode().addActionListener(this);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		String command = e.getActionCommand();
+		if (command.equals("port")) {
+
+			connectport_view view = new connectport_view();
+			config_port model = new config_port();
+			new connectport_menu(view, model);
+
+		} else {
+			config_page view = new config_page();
+			config_port model = new config_port();
+			new config_menu(view,model);
+			System.out.print("Config_Mode");
+		}
+	}
+
+}

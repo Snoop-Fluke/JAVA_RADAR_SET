@@ -1,0 +1,1688 @@
+17:04:27 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'set_color':
+..\src\test_swtichcase_.c:55:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\test_swtichcase_.c:67:25: warning: function returns address of local variable [-Wreturn-local-addr]
+                  return arr_color;
+                         ^~~~~~~~~
+..\src\test_swtichcase_.c:79:33: warning: function returns address of local variable [-Wreturn-local-addr]
+                          return arr_color;
+                                 ^~~~~~~~~
+..\src\test_swtichcase_.c:42:9: warning: unused variable 'command_input' [-Wunused-variable]
+     int command_input = 1;
+         ^~~~~~~~~~~~~
+..\src\test_swtichcase_.c: In function 'main':
+..\src\test_swtichcase_.c:93:10: error: called object is not a function or function pointer
+  printf( ": %d\n" (p + 1));
+          ^~~~~~~~
+..\src\test_swtichcase_.c: In function 'set_color':
+..\src\test_swtichcase_.c:47:9: warning: statement will never be executed [-Wswitch-unreachable]
+         printf( "return red");
+         ^~~~~~~~~~~~~~~~~~~~~
+..\src\test_swtichcase_.c: In function 'test_print':
+..\src\test_swtichcase_.c:88:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+17:04:32 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'set_color':
+..\src\test_swtichcase_.c:55:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\test_swtichcase_.c:67:25: warning: function returns address of local variable [-Wreturn-local-addr]
+                  return arr_color;
+                         ^~~~~~~~~
+..\src\test_swtichcase_.c:79:33: warning: function returns address of local variable [-Wreturn-local-addr]
+                          return arr_color;
+                                 ^~~~~~~~~
+..\src\test_swtichcase_.c:42:9: warning: unused variable 'command_input' [-Wunused-variable]
+     int command_input = 1;
+         ^~~~~~~~~~~~~
+..\src\test_swtichcase_.c: In function 'main':
+..\src\test_swtichcase_.c:93:19: error: invalid operands to binary * (have 'char *' and 'int *')
+  printf( ": %d\n" *(p + 1));
+          ~~~~~~~~ ^~~~~~~~
+..\src\test_swtichcase_.c: In function 'set_color':
+..\src\test_swtichcase_.c:47:9: warning: statement will never be executed [-Wswitch-unreachable]
+         printf( "return red");
+         ^~~~~~~~~~~~~~~~~~~~~
+..\src\test_swtichcase_.c: In function 'test_print':
+..\src\test_swtichcase_.c:88:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+17:05:00 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'set_color':
+..\src\test_swtichcase_.c:55:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\test_swtichcase_.c:67:25: warning: function returns address of local variable [-Wreturn-local-addr]
+                  return arr_color;
+                         ^~~~~~~~~
+..\src\test_swtichcase_.c:79:33: warning: function returns address of local variable [-Wreturn-local-addr]
+                          return arr_color;
+                                 ^~~~~~~~~
+..\src\test_swtichcase_.c:42:9: warning: unused variable 'command_input' [-Wunused-variable]
+     int command_input = 1;
+         ^~~~~~~~~~~~~
+..\src\test_swtichcase_.c: In function 'main':
+..\src\test_swtichcase_.c:93:19: error: invalid operands to binary * (have 'char *' and 'int *')
+  printf( ": %d\n" *(p);
+          ~~~~~~~~ ^
+..\src\test_swtichcase_.c:93:23: error: expected ')' before ';' token
+  printf( ": %d\n" *(p);
+                       ^
+                       )
+..\src\test_swtichcase_.c:94:15: error: expected ';' before '}' token
+  test_print();
+               ^
+               ;
+ }
+ ~              
+..\src\test_swtichcase_.c: In function 'set_color':
+..\src\test_swtichcase_.c:47:9: warning: statement will never be executed [-Wswitch-unreachable]
+         printf( "return red");
+         ^~~~~~~~~~~~~~~~~~~~~
+..\src\test_swtichcase_.c: In function 'test_print':
+..\src\test_swtichcase_.c:88:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+17:05:37 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'set_color':
+..\src\test_swtichcase_.c:55:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\test_swtichcase_.c:67:25: warning: function returns address of local variable [-Wreturn-local-addr]
+                  return arr_color;
+                         ^~~~~~~~~
+..\src\test_swtichcase_.c:79:33: warning: function returns address of local variable [-Wreturn-local-addr]
+                          return arr_color;
+                                 ^~~~~~~~~
+..\src\test_swtichcase_.c:42:9: warning: unused variable 'command_input' [-Wunused-variable]
+     int command_input = 1;
+         ^~~~~~~~~~~~~
+..\src\test_swtichcase_.c:47:9: warning: statement will never be executed [-Wswitch-unreachable]
+         printf( "return red");
+         ^~~~~~~~~~~~~~~~~~~~~
+..\src\test_swtichcase_.c: In function 'test_print':
+..\src\test_swtichcase_.c:88:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:05:57 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'set_color':
+..\src\test_swtichcase_.c:55:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\test_swtichcase_.c:67:25: warning: function returns address of local variable [-Wreturn-local-addr]
+                  return arr_color;
+                         ^~~~~~~~~
+..\src\test_swtichcase_.c:79:33: warning: function returns address of local variable [-Wreturn-local-addr]
+                          return arr_color;
+                                 ^~~~~~~~~
+..\src\test_swtichcase_.c:42:9: warning: unused variable 'command_input' [-Wunused-variable]
+     int command_input = 1;
+         ^~~~~~~~~~~~~
+..\src\test_swtichcase_.c:47:9: warning: statement will never be executed [-Wswitch-unreachable]
+         printf( "return red");
+         ^~~~~~~~~~~~~~~~~~~~~
+..\src\test_swtichcase_.c: In function 'test_print':
+..\src\test_swtichcase_.c:88:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:06:17 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'set_color':
+..\src\test_swtichcase_.c:55:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\test_swtichcase_.c:67:25: warning: function returns address of local variable [-Wreturn-local-addr]
+                  return arr_color;
+                         ^~~~~~~~~
+..\src\test_swtichcase_.c:79:33: warning: function returns address of local variable [-Wreturn-local-addr]
+                          return arr_color;
+                                 ^~~~~~~~~
+..\src\test_swtichcase_.c:42:9: warning: unused variable 'command_input' [-Wunused-variable]
+     int command_input = 1;
+         ^~~~~~~~~~~~~
+..\src\test_swtichcase_.c:47:9: warning: statement will never be executed [-Wswitch-unreachable]
+         printf( "return red");
+         ^~~~~~~~~~~~~~~~~~~~~
+..\src\test_swtichcase_.c: In function 'test_print':
+..\src\test_swtichcase_.c:88:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:07:09 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:19:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return num;
+            ^~~
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+Info: Nothing to build for test_swtichcase_
+17:08:23 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:10:33 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:17: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int num[] = malloc(sizeof(int[10][10]));
+                 ^~~~~~
+..\src\test_swtichcase_.c:9:17: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:17: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:17:
+     int num[] = malloc(sizeof(int[10][10]));
+                 ^~~~~~
+..\src\test_swtichcase_.c:9:17: error: invalid initializer
+..\src\test_swtichcase_.c:19:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return num;
+            ^~~
+17:10:48 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:17: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int num[] = malloc(sizeof(int[10]*10));
+                 ^~~~~~
+..\src\test_swtichcase_.c:9:17: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:17: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:17:
+     int num[] = malloc(sizeof(int[10]*10));
+                 ^~~~~~
+..\src\test_swtichcase_.c:9:38: error: expected ')' before '*' token
+     int num[] = malloc(sizeof(int[10]*10));
+                              ~       ^
+                                      )
+..\src\test_swtichcase_.c:9:17: error: invalid initializer
+     int num[] = malloc(sizeof(int[10]*10));
+                 ^~~~~~
+..\src\test_swtichcase_.c:19:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return num;
+            ^~~
+17:10:55 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:17: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int num[] = malloc(sizeof(int[10]*10));
+                 ^~~~~~
+..\src\test_swtichcase_.c:9:17: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:17: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:17:
+     int num[] = malloc(sizeof(int[10]*10));
+                 ^~~~~~
+..\src\test_swtichcase_.c:9:38: error: expected ')' before '*' token
+     int num[] = malloc(sizeof(int[10]*10));
+                              ~       ^
+                                      )
+..\src\test_swtichcase_.c:9:17: error: invalid initializer
+     int num[] = malloc(sizeof(int[10]*10));
+                 ^~~~~~
+..\src\test_swtichcase_.c:19:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return num;
+            ^~~
+17:12:50 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:23: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int num[] = (int*)malloc(10 * sizeof(int));
+                       ^~~~~~
+..\src\test_swtichcase_.c:9:23: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:23: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:23:
+     int num[] = (int*)malloc(10 * sizeof(int));
+                       ^~~~~~
+..\src\test_swtichcase_.c:9:17: error: invalid initializer
+     int num[] = (int*)malloc(10 * sizeof(int));
+                 ^
+..\src\test_swtichcase_.c:19:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return num;
+            ^~~
+17:13:12 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:24: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int *num[] = (int*)malloc(10 * sizeof(int));
+                        ^~~~~~
+..\src\test_swtichcase_.c:9:24: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:24: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:24:
+     int *num[] = (int*)malloc(10 * sizeof(int));
+                        ^~~~~~
+..\src\test_swtichcase_.c:9:18: error: invalid initializer
+     int *num[] = (int*)malloc(10 * sizeof(int));
+                  ^
+..\src\test_swtichcase_.c:16:18: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+         printf("%d\n", num[i]);
+                 ~^     ~~~~~~
+                 %n
+..\src\test_swtichcase_.c:19:12: warning: returning 'int **' from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+     return num;
+            ^~~
+..\src\test_swtichcase_.c:19:12: warning: function returns address of local variable [-Wreturn-local-addr]
+17:13:46 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:22: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int *num = (int*)malloc(10 * sizeof(int));
+                      ^~~~~~
+..\src\test_swtichcase_.c:9:22: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:22: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:22:
+     int *num = (int*)malloc(10 * sizeof(int));
+                      ^~~~~~
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:14:07 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:22: warning: implicit declaration of function 'calloc' [-Wimplicit-function-declaration]
+     int *num = (int*)calloc(10 * sizeof(int));
+                      ^~~~~~
+..\src\test_swtichcase_.c:9:22: warning: incompatible implicit declaration of built-in function 'calloc'
+..\src\test_swtichcase_.c:9:22: note: include '<stdlib.h>' or provide a declaration of 'calloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:22:
+     int *num = (int*)calloc(10 * sizeof(int));
+                      ^~~~~~
+..\src\test_swtichcase_.c:9:22: error: too few arguments to function 'calloc'
+17:14:47 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:20: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int num = (int)malloc(10 * sizeof(int));
+                    ^~~~~~
+..\src\test_swtichcase_.c:9:20: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:20: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:20:
+     int num = (int)malloc(10 * sizeof(int));
+                    ^~~~~~
+..\src\test_swtichcase_.c:16:27: error: subscripted value is neither array nor pointer nor vector
+         printf("%d\n", num[i]);
+                           ^
+..\src\test_swtichcase_.c:19:12: warning: returning 'int' from a function with return type 'int *' makes pointer from integer without a cast [-Wint-conversion]
+     return num;
+            ^~~
+17:14:58 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:22: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int num[] = (int)malloc(10 * sizeof(int));
+                      ^~~~~~
+..\src\test_swtichcase_.c:9:22: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:22: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:22:
+     int num[] = (int)malloc(10 * sizeof(int));
+                      ^~~~~~
+..\src\test_swtichcase_.c:9:17: error: invalid initializer
+     int num[] = (int)malloc(10 * sizeof(int));
+                 ^
+..\src\test_swtichcase_.c:19:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return num;
+            ^~~
+17:15:12 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:24: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int num[10] = (int)malloc(10 * sizeof(int));
+                        ^~~~~~
+..\src\test_swtichcase_.c:9:24: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:24: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:24:
+     int num[10] = (int)malloc(10 * sizeof(int));
+                        ^~~~~~
+..\src\test_swtichcase_.c:9:19: error: invalid initializer
+     int num[10] = (int)malloc(10 * sizeof(int));
+                   ^
+..\src\test_swtichcase_.c:19:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return num;
+            ^~~
+17:15:58 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:22: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int *num = (int*)malloc(10 * sizeof(int));
+                      ^~~~~~
+..\src\test_swtichcase_.c:9:22: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:22: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:22:
+     int *num = (int*)malloc(10 * sizeof(int));
+                      ^~~~~~
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:16:17 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:22: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int *num = (int*)malloc(10 * sizeof(int));
+                      ^~~~~~
+..\src\test_swtichcase_.c:9:22: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:22: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:22:
+     int *num = (int*)malloc(10 * sizeof(int));
+                      ^~~~~~
+..\src\test_swtichcase_.c:16:24: error: invalid type argument of unary '*' (have 'int')
+         printf("%d\n", *num[i]);
+                        ^~~~~~~
+..\src\test_swtichcase_.c: In function 'main':
+..\src\test_swtichcase_.c:36:24: error: invalid type argument of unary '*' (have 'int')
+         printf("%d\n", *num[i]);
+                        ^~~~~~~
+17:16:55 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:22: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int *num = (int*)malloc(10 * sizeof(int));
+                      ^~~~~~
+..\src\test_swtichcase_.c:9:22: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:22: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:22:
+     int *num = (int*)malloc(10 * sizeof(int));
+                      ^~~~~~
+..\src\test_swtichcase_.c:16:18: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+         printf("%d\n", &num[i]);
+                 ~^     ~~~~~~~
+                 %n
+..\src\test_swtichcase_.c: In function 'main':
+..\src\test_swtichcase_.c:36:24: error: invalid type argument of unary '*' (have 'int')
+         printf("%d\n", *num[i]);
+                        ^~~~~~~
+17:17:04 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:22: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     int *num = (int*)malloc(10 * sizeof(int));
+                      ^~~~~~
+..\src\test_swtichcase_.c:9:22: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:9:22: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:9:22:
+     int *num = (int*)malloc(10 * sizeof(int));
+                      ^~~~~~
+..\src\test_swtichcase_.c:16:18: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+         printf("%d\n", &num[i]);
+                 ~^     ~~~~~~~
+                 %n
+..\src\test_swtichcase_.c: In function 'main':
+..\src\test_swtichcase_.c:36:18: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+         printf("%d\n", &num[i]);
+                 ~^     ~~~~~~~
+                 %n
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:17:42 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:19:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return num;
+            ^~~
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:20:43 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:10:8: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  num = malloc (sizeof (int) * 6);
+        ^~~~~~
+..\src\test_swtichcase_.c:10:8: warning: incompatible implicit declaration of built-in function 'malloc'
+..\src\test_swtichcase_.c:10:8: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\src\test_swtichcase_.c:2:1:
++#include <stdlib.h>
+ 
+..\src\test_swtichcase_.c:10:8:
+  num = malloc (sizeof (int) * 6);
+        ^~~~~~
+..\src\test_swtichcase_.c:11:8: error: expected expression before '{' token
+  num = {1, 2, 3, 4, 5};
+        ^
+17:21:33 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:11:8: error: expected expression before '{' token
+  num = {1, 2, 3, 4, 5};
+        ^
+17:22:19 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:11:8: error: expected expression before '{' token
+  num = {1, 2, 3, 4, 5};
+        ^
+17:22:50 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:7: error: array size missing in 'num'
+  int *num[];
+       ^~~
+..\src\test_swtichcase_.c:10:6: error: assignment to expression with array type
+  num = malloc (sizeof(int) * 6);
+      ^
+..\src\test_swtichcase_.c:11:6: error: expected expression before ']' token
+  num[] = {1, 2, 3, 4, 5};
+      ^
+..\src\test_swtichcase_.c:18:18: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+         printf("%d\n", num[i]);
+                 ~^     ~~~~~~
+                 %n
+..\src\test_swtichcase_.c:21:12: warning: returning 'int **' from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+     return num;
+            ^~~
+..\src\test_swtichcase_.c:21:12: warning: function returns address of local variable [-Wreturn-local-addr]
+17:22:59 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:9:7: error: array size missing in 'num'
+  int *num[];
+       ^~~
+..\src\test_swtichcase_.c:10:6: error: expected expression before ']' token
+  num[] = malloc (sizeof(int) * 6);
+      ^
+..\src\test_swtichcase_.c:11:6: error: expected expression before ']' token
+  num[] = {1, 2, 3, 4, 5};
+      ^
+..\src\test_swtichcase_.c:18:18: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+         printf("%d\n", num[i]);
+                 ~^     ~~~~~~
+                 %n
+..\src\test_swtichcase_.c:21:12: warning: returning 'int **' from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+     return num;
+            ^~~
+..\src\test_swtichcase_.c:21:12: warning: function returns address of local variable [-Wreturn-local-addr]
+17:24:54 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:26:34 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:28:13 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+Info: Nothing to build for test_swtichcase_
+17:30:06 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:30:45 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:21:34: error: lvalue required as left operand of assignment
+         printf("%d\n", (num + 1) =3);
+                                  ^
+17:31:15 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:21:18: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+         printf("%d\n", (num + 1));
+                 ~^     ~~~~~~~~~
+                 %n
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:39:00 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:21:18: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+         printf("%d\n", (num + 1));
+                 ~^     ~~~~~~~~~
+                 %n
+..\src\test_swtichcase_.c: In function 'main':
+..\src\test_swtichcase_.c:41:18: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+         printf("%d\n", (num + 1));
+                 ~^     ~~~~~~~~~
+                 %n
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:40:53 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:11:12: error: lvalue required as left operand of assignment
+  (num + 1) =1;
+            ^
+..\src\test_swtichcase_.c:12:12: error: lvalue required as left operand of assignment
+  (num + 1) =2;
+            ^
+..\src\test_swtichcase_.c:13:12: error: lvalue required as left operand of assignment
+  (num + 1) =3;
+            ^
+..\src\test_swtichcase_.c:21:18: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+         printf("%d\n", (num + 1));
+                 ~^     ~~~~~~~~~
+                 %n
+17:41:23 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:21:18: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+         printf("%d\n", (num + 1));
+                 ~^     ~~~~~~~~~
+                 %n
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:44:18 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:21:30: error: expected ')' before ';' token
+         printf("%d\n", num[i];
+                              ^
+                              )
+..\src\test_swtichcase_.c:21:31: error: expected ';' before '}' token
+         printf("%d\n", num[i];
+                               ^
+                               ;
+     }
+     ~                          
+17:45:09 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:45:31 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:45:47 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:21:30: error: expected ')' before ';' token
+         printf("%d\n", num[i];
+                              ^
+                              )
+..\src\test_swtichcase_.c:21:31: error: expected ';' before '}' token
+         printf("%d\n", num[i];
+                               ^
+                               ;
+     }
+     ~                          
+17:46:09 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+17:46:29 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:11:6: error: expected expression before ']' token
+  num[] ={1,2,3,4,5};
+      ^
+17:46:37 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:11:6: error: expected expression before ']' token
+  num[] ={1,2,3,4,5};
+      ^
+17:46:50 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:11:7: error: expected expression before '{' token
+  num ={1,2,3,4,5};
+       ^
+17:47:03 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:11:7: error: expected expression before '[' token
+  num =[1,2,3,4,5];
+       ^
+..\src\test_swtichcase_.c:11:9: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  num =[1,2,3,4,5];
+         ^
+..\src\test_swtichcase_.c:11:11: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  num =[1,2,3,4,5];
+           ^
+..\src\test_swtichcase_.c:11:13: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  num =[1,2,3,4,5];
+             ^
+..\src\test_swtichcase_.c:11:15: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  num =[1,2,3,4,5];
+               ^
+17:47:39 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:11:6: error: expected expression before ']' token
+  num[] = {19, 10, 8, 17, 9};
+      ^
+17:48:09 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:11:7: error: expected expression before ']' token
+  *num[] = {19, 10, 8, 17, 9};
+       ^
+17:48:18 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:11:9: error: expected expression before '{' token
+  *num = {19, 10, 8, 17, 9};
+         ^
+17:48:23 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:11:8: error: expected expression before '{' token
+  num = {19, 10, 8, 17, 9};
+        ^
+17:52:15 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:11:6: error: expected expression before ']' token
+  num[] = {19, 10, 8, 17, 9};
+      ^
+17:52:43 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+Info: Nothing to build for test_swtichcase_
+17:59:06 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:10:8: error: too few arguments to function 'calloc'
+  num = calloc(10 * sizeof(int));
+        ^~~~~~
+In file included from ..\src\test_swtichcase_.c:2:
+c:\mingw\include\stdlib.h:502:40: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  void *calloc (size_t, size_t) __MINGW_ATTRIB_MALLOC;
+                                        ^~~~~~
+17:59:58 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:10:8: error: too few arguments to function 'calloc'
+  num = calloc(10 * sizeof(int));
+        ^~~~~~
+In file included from ..\src\test_swtichcase_.c:2:
+c:\mingw\include\stdlib.h:502:40: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  void *calloc (size_t, size_t) __MINGW_ATTRIB_MALLOC;
+                                        ^~~~~~
+18:00:11 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+..\src\test_swtichcase_.c: In function 'getArray':
+..\src\test_swtichcase_.c:10:21: error: 'n' undeclared (first use in this function)
+  num = (int*)calloc(n, sizeof(int));
+                     ^
+..\src\test_swtichcase_.c:10:21: note: each undeclared identifier is reported only once for each function it appears in
+18:01:44 **** Incremental Build of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+09:48:10 **** Rebuild of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+09:54:46 **** Rebuild of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'union_test':
+..\src\OK_TEST.c:28:5: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+     strcpy(person1.name, "Thomas");
+     ^~~~~~
+..\src\OK_TEST.c:28:5: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\src\OK_TEST.c:28:5: note: include '<string.h>' or provide a declaration of 'strcpy'
+..\src\OK_TEST.c:3:1:
++#include <string.h>
+ 
+..\src\OK_TEST.c:28:5:
+     strcpy(person1.name, "Thomas");
+     ^~~~~~
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:08:43 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:24:23: warning: 'struct R_G_B' declared inside parameter list will not be visible outside of this definition or declaration
+ int *set_color(struct R_G_B *rgb)
+                       ^~~~~
+..\src\OK_TEST.c: In function 'set_color':
+..\src\OK_TEST.c:30:47: error: dereferencing pointer to incomplete type 'struct R_G_B'
+                 static int arr_color[4] = {rgb->_red,0,0};
+                                               ^~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:87:17: error: 'test_struct' undeclared (first use in this function)
+  int a = sizeof(test_struct);
+                 ^~~~~~~~~~~
+..\src\OK_TEST.c:87:17: note: each undeclared identifier is reported only once for each function it appears in
+10:11:29 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:25:9: error: unknown type name 'uint8_t'
+         uint8_t _red;//set_color_RED
+         ^~~~~~~
+..\src\OK_TEST.c:26:9: error: unknown type name 'uint8_t'
+         uint8_t _green;//set_color_GREEN
+         ^~~~~~~
+..\src\OK_TEST.c:27:9: error: unknown type name 'uint8_t'
+         uint8_t _blue;//set_color_BLUE
+         ^~~~~~~
+..\src\OK_TEST.c: In function 'set_color':
+..\src\OK_TEST.c:36:44: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,0,0};
+                                            ^~~
+..\src\OK_TEST.c:36:44: note: (near initialization for 'arr_color[0]')
+..\src\OK_TEST.c:42:46: error: initializer element is not constant
+                 static int arr_color[4] = {0,rgb->_green,0};
+                                              ^~~
+..\src\OK_TEST.c:42:46: note: (near initialization for 'arr_color[1]')
+..\src\OK_TEST.c:48:48: error: initializer element is not constant
+                 static int arr_color[4] = {0,0,rgb->_blue};
+                                                ^~~
+..\src\OK_TEST.c:48:48: note: (near initialization for 'arr_color[2]')
+..\src\OK_TEST.c:54:44: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,rgb->_green,0};
+                                            ^~~
+..\src\OK_TEST.c:54:44: note: (near initialization for 'arr_color[0]')
+..\src\OK_TEST.c:54:54: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,rgb->_green,0};
+                                                      ^~~
+..\src\OK_TEST.c:54:54: note: (near initialization for 'arr_color[1]')
+..\src\OK_TEST.c:60:44: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,0,rgb->_blue};
+                                            ^~~
+..\src\OK_TEST.c:60:44: note: (near initialization for 'arr_color[0]')
+..\src\OK_TEST.c:60:56: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,0,rgb->_blue};
+                                                        ^~~
+..\src\OK_TEST.c:60:56: note: (near initialization for 'arr_color[2]')
+..\src\OK_TEST.c:66:46: error: initializer element is not constant
+                 static int arr_color[4] = {0,rgb->_green,rgb->_blue};
+                                              ^~~
+..\src\OK_TEST.c:66:46: note: (near initialization for 'arr_color[1]')
+..\src\OK_TEST.c:66:58: error: initializer element is not constant
+                 static int arr_color[4] = {0,rgb->_green,rgb->_blue};
+                                                          ^~~
+..\src\OK_TEST.c:66:58: note: (near initialization for 'arr_color[2]')
+..\src\OK_TEST.c:73:44: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,rgb->_green,0};
+                                            ^~~
+..\src\OK_TEST.c:73:44: note: (near initialization for 'arr_color[0]')
+..\src\OK_TEST.c:73:54: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,rgb->_green,0};
+                                                      ^~~
+..\src\OK_TEST.c:73:54: note: (near initialization for 'arr_color[1]')
+..\src\OK_TEST.c:80:44: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,0,rgb->_blue};
+                                            ^~~
+..\src\OK_TEST.c:80:44: note: (near initialization for 'arr_color[0]')
+..\src\OK_TEST.c:80:56: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,0,rgb->_blue};
+                                                        ^~~
+..\src\OK_TEST.c:80:56: note: (near initialization for 'arr_color[2]')
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:94:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'a'
+  a = set_color(R_G_B);
+  ^
+..\src\OK_TEST.c:94:2: error: 'a' undeclared (first use in this function)
+..\src\OK_TEST.c:94:2: note: each undeclared identifier is reported only once for each function it appears in
+..\src\OK_TEST.c:94:16: error: expected expression before 'R_G_B'
+  a = set_color(R_G_B);
+                ^~~~~
+10:12:06 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:25:9: error: unknown type name 'uint8_t'
+         uint8_t _red;//set_color_RED
+         ^~~~~~~
+..\src\OK_TEST.c:26:9: error: unknown type name 'uint8_t'
+         uint8_t _green;//set_color_GREEN
+         ^~~~~~~
+..\src\OK_TEST.c:27:9: error: unknown type name 'uint8_t'
+         uint8_t _blue;//set_color_BLUE
+         ^~~~~~~
+..\src\OK_TEST.c: In function 'set_color':
+..\src\OK_TEST.c:36:44: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,0,0};
+                                            ^~~
+..\src\OK_TEST.c:36:44: note: (near initialization for 'arr_color[0]')
+..\src\OK_TEST.c:42:46: error: initializer element is not constant
+                 static int arr_color[4] = {0,rgb->_green,0};
+                                              ^~~
+..\src\OK_TEST.c:42:46: note: (near initialization for 'arr_color[1]')
+..\src\OK_TEST.c:48:48: error: initializer element is not constant
+                 static int arr_color[4] = {0,0,rgb->_blue};
+                                                ^~~
+..\src\OK_TEST.c:48:48: note: (near initialization for 'arr_color[2]')
+..\src\OK_TEST.c:54:44: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,rgb->_green,0};
+                                            ^~~
+..\src\OK_TEST.c:54:44: note: (near initialization for 'arr_color[0]')
+..\src\OK_TEST.c:54:54: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,rgb->_green,0};
+                                                      ^~~
+..\src\OK_TEST.c:54:54: note: (near initialization for 'arr_color[1]')
+..\src\OK_TEST.c:60:44: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,0,rgb->_blue};
+                                            ^~~
+..\src\OK_TEST.c:60:44: note: (near initialization for 'arr_color[0]')
+..\src\OK_TEST.c:60:56: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,0,rgb->_blue};
+                                                        ^~~
+..\src\OK_TEST.c:60:56: note: (near initialization for 'arr_color[2]')
+..\src\OK_TEST.c:66:46: error: initializer element is not constant
+                 static int arr_color[4] = {0,rgb->_green,rgb->_blue};
+                                              ^~~
+..\src\OK_TEST.c:66:46: note: (near initialization for 'arr_color[1]')
+..\src\OK_TEST.c:66:58: error: initializer element is not constant
+                 static int arr_color[4] = {0,rgb->_green,rgb->_blue};
+                                                          ^~~
+..\src\OK_TEST.c:66:58: note: (near initialization for 'arr_color[2]')
+..\src\OK_TEST.c:73:44: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,rgb->_green,0};
+                                            ^~~
+..\src\OK_TEST.c:73:44: note: (near initialization for 'arr_color[0]')
+..\src\OK_TEST.c:73:54: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,rgb->_green,0};
+                                                      ^~~
+..\src\OK_TEST.c:73:54: note: (near initialization for 'arr_color[1]')
+..\src\OK_TEST.c:80:44: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,0,rgb->_blue};
+                                            ^~~
+..\src\OK_TEST.c:80:44: note: (near initialization for 'arr_color[0]')
+..\src\OK_TEST.c:80:56: error: initializer element is not constant
+                 static int arr_color[4] = {rgb->_red,0,rgb->_blue};
+                                                        ^~~
+..\src\OK_TEST.c:80:56: note: (near initialization for 'arr_color[2]')
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:99:22: error: expected expression before 'R_G_B'
+      num = set_color(R_G_B);
+                      ^~~~~
+10:12:50 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'set_color':
+..\src\OK_TEST.c:37:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:43:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:49:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:55:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:61:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:67:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:74:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:81:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:99:22: error: expected expression before 'R_G_B'
+      num = set_color(R_G_B);
+                      ^~~~~
+10:13:16 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'set_color':
+..\src\OK_TEST.c:37:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:43:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:49:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:55:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:61:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:67:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:74:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:81:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:99:23: error: expected expression before 'R_G_B'
+      num = set_color(&R_G_B);
+                       ^~~~~
+10:13:38 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'set_color':
+..\src\OK_TEST.c:37:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:43:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:49:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:55:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:61:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:67:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:74:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+..\src\OK_TEST.c:81:24: warning: function returns address of local variable [-Wreturn-local-addr]
+                 return arr_color;
+                        ^~~~~~~~~
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:32:32 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:37:05 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:37:34 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:37:46 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:38:00 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:38:42 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:39:07 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:40:17 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:51:27 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:51:56 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:52:07 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+Info: Nothing to build for OK_TEST
+Info: Nothing to build for test_swtichcase_
+10:58:13 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+10:58:27 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+14:38:12 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:19:25: warning: 'struct R_G_B' declared inside parameter list will not be visible outside of this definition or declaration
+   int *set_color(struct R_G_B *rgb)
+                         ^~~~~
+..\src\OK_TEST.c:20:9: error: expected ':', ',', ';', '}' or '__attribute__' before 'set_color_font'
+         set_color_font _set_color_font;
+         ^~~~~~~~~~~~~~
+14:38:49 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:19:25: warning: 'struct R_G_B' declared inside parameter list will not be visible outside of this definition or declaration
+   int *set_color(struct R_G_B *rgb);
+                         ^~~~~
+..\src\OK_TEST.c:19:8: error: field 'set_color' declared as a function
+   int *set_color(struct R_G_B *rgb);
+        ^~~~~~~~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:84:37: warning: passing argument 1 of 'set_text_alert.set_color' from incompatible pointer type [-Wincompatible-pointer-types]
+      num = set_text_alert.set_color(&R_G_B);
+                                     ^~~~~~
+..\src\OK_TEST.c:84:37: note: expected 'struct R_G_B *' but argument is of type 'struct R_G_B *'
+14:39:05 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:19:25: warning: 'struct R_G_B' declared inside parameter list will not be visible outside of this definition or declaration
+   int *set_color(struct R_G_B *rgb);
+                         ^~~~~
+..\src\OK_TEST.c:19:8: error: field 'set_color' declared as a function
+   int *set_color(struct R_G_B *rgb);
+        ^~~~~~~~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:84:26: error: invalid type argument of '->' (have 'struct config_option')
+      num = set_text_alert->set_color(&R_G_B);
+                          ^~
+14:39:26 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:19:3: error: expected specifier-qualifier-list before 'set_color'
+   set_color(struct R_G_B *rgb);
+   ^~~~~~~~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:84:26: error: invalid type argument of '->' (have 'struct config_option')
+      num = set_text_alert->set_color(&R_G_B);
+                          ^~
+14:52:28 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:19:3: error: expected specifier-qualifier-list before 'set_color'
+   set_color();
+   ^~~~~~~~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:84:26: error: invalid type argument of '->' (have 'struct config_option')
+      num = set_text_alert->set_color(&R_G_B);
+                          ^~
+14:55:10 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:19:18: error: expected declaration specifiers or '...' before '*' token
+  pno(*AddClient)(*config_option);
+                  ^
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:84:26: error: invalid type argument of '->' (have 'struct config_option')
+      num = set_text_alert->set_color(&R_G_B);
+                          ^~
+14:55:45 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:84:26: error: invalid type argument of '->' (have 'struct config_option')
+      num = set_text_alert->set_color(&R_G_B);
+                          ^~
+14:58:56 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:28:2: error: 'R_G_B' redeclared as different kind of symbol
+ }R_G_B;
+  ^~~~~
+..\src\OK_TEST.c:16:30: note: previous declaration of 'R_G_B' was here
+ typedef struct config_option R_G_B, *pno;
+                              ^~~~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:84:26: error: invalid type argument of '->' (have 'struct config_option')
+      num = set_text_alert->set_text_alert.set_color(&R_G_B);
+                          ^~
+14:59:21 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:23:30: error: 'R_G_B' redeclared as different kind of symbol
+ typedef struct config_option R_G_B, *pno;
+                              ^~~~~
+..\src\OK_TEST.c:21:2: note: previous declaration of 'R_G_B' was here
+ }R_G_B;
+  ^~~~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:85:26: error: invalid type argument of '->' (have 'struct config_option')
+      num = set_text_alert->set_text_alert.set_color(&R_G_B);
+                          ^~
+..\src\OK_TEST.c:85:54: error: expected expression before 'R_G_B'
+      num = set_text_alert->set_text_alert.set_color(&R_G_B);
+                                                      ^~~~~
+14:59:52 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:26:18: error: expected declaration specifiers or '...' before 'R_G_B'
+  pno(*AddClient)(R_G_B*);
+                  ^~~~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:85:26: error: invalid type argument of '->' (have 'struct config_option')
+      num = set_text_alert->set_text_alert.set_color(&R_G_B);
+                          ^~
+15:00:06 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:85:26: error: invalid type argument of '->' (have 'struct config_option')
+      num = set_text_alert->set_text_alert.set_color(&R_G_B);
+                          ^~
+15:01:01 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'set_color':
+..\src\OK_TEST.c:41:9: error: case label does not reduce to an integer constant
+         case red:
+         ^~~~
+..\src\OK_TEST.c:43:24: error: 'rgb' undeclared (first use in this function)
+          arr_color[0] =rgb->_red;
+                        ^~~
+..\src\OK_TEST.c:43:24: note: each undeclared identifier is reported only once for each function it appears in
+..\src\OK_TEST.c:36:6: warning: unused variable '_blue' [-Wunused-variable]
+  int _blue = 30;
+      ^~~~~
+..\src\OK_TEST.c:35:6: warning: unused variable '_green' [-Wunused-variable]
+  int _green = 50;
+      ^~~~~~
+..\src\OK_TEST.c:34:6: warning: variable 'red' set but not used [-Wunused-but-set-variable]
+  int red = 120;
+      ^~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:85:26: error: invalid type argument of '->' (have 'struct config_option')
+      num = set_text_alert->set_text_alert.set_color();
+                          ^~
+15:01:26 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'set_color':
+..\src\OK_TEST.c:41:9: error: case label does not reduce to an integer constant
+         case red:
+         ^~~~
+..\src\OK_TEST.c:43:24: error: 'rgb' undeclared (first use in this function)
+          arr_color[0] =rgb->_red;
+                        ^~~
+..\src\OK_TEST.c:43:24: note: each undeclared identifier is reported only once for each function it appears in
+..\src\OK_TEST.c:36:6: warning: unused variable '_blue' [-Wunused-variable]
+  int _blue = 30;
+      ^~~~~
+..\src\OK_TEST.c:35:6: warning: unused variable '_green' [-Wunused-variable]
+  int _green = 50;
+      ^~~~~~
+..\src\OK_TEST.c:34:6: warning: variable 'red' set but not used [-Wunused-but-set-variable]
+  int red = 120;
+      ^~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:85:26: error: invalid type argument of '->' (have 'struct config_option')
+      num = set_text_alert->set_color();
+                          ^~
+15:01:35 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'set_color':
+..\src\OK_TEST.c:41:9: error: case label does not reduce to an integer constant
+         case red:
+         ^~~~
+..\src\OK_TEST.c:43:24: error: 'rgb' undeclared (first use in this function)
+          arr_color[0] =rgb->_red;
+                        ^~~
+..\src\OK_TEST.c:43:24: note: each undeclared identifier is reported only once for each function it appears in
+..\src\OK_TEST.c:36:6: warning: unused variable '_blue' [-Wunused-variable]
+  int _blue = 30;
+      ^~~~~
+..\src\OK_TEST.c:35:6: warning: unused variable '_green' [-Wunused-variable]
+  int _green = 50;
+      ^~~~~~
+..\src\OK_TEST.c:34:6: warning: variable 'red' set but not used [-Wunused-but-set-variable]
+  int red = 120;
+      ^~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:85:27: error: 'struct config_option' has no member named 'set_color'; did you mean '_set_color_font'?
+      num = set_text_alert.set_color();
+                           ^~~~~~~~~
+                           _set_color_font
+15:02:21 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'set_color':
+..\src\OK_TEST.c:41:9: error: case label does not reduce to an integer constant
+         case red:
+         ^~~~
+..\src\OK_TEST.c:43:24: error: '_red' undeclared (first use in this function); did you mean 'red'?
+          arr_color[0] =_red;
+                        ^~~~
+                        red
+..\src\OK_TEST.c:43:24: note: each undeclared identifier is reported only once for each function it appears in
+..\src\OK_TEST.c:34:6: warning: variable 'red' set but not used [-Wunused-but-set-variable]
+  int red = 120;
+      ^~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:85:27: error: 'struct config_option' has no member named 'set_color'; did you mean '_set_color_font'?
+      num = set_text_alert.set_color();
+                           ^~~~~~~~~
+                           _set_color_font
+15:02:32 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:85:27: error: 'struct config_option' has no member named 'set_color'; did you mean '_set_color_font'?
+      num = set_text_alert.set_color();
+                           ^~~~~~~~~
+                           _set_color_font
+15:03:07 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:84:26: error: 'struct config_option' has no member named 'set_color'
+      num = set_text_alert.set_color();
+                          ^
+15:04:33 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:82:31: warning: assignment to 'struct config_option * (*)(config_option *)' {aka 'struct config_option * (*)(struct config_option *)'} from incompatible pointer type 'int *' [-Wincompatible-pointer-types]
+      set_text_alert.AddClient = set_color();
+                               ^
+..\src\OK_TEST.c:84:10: warning: assignment to 'int *' from incompatible pointer type 'struct config_option * (*)(config_option *)' {aka 'struct config_option * (*)(struct config_option *)'} [-Wincompatible-pointer-types]
+      num = set_text_alert.AddClient;
+          ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+Info: Nothing to build for OK_TEST
+15:34:50 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:26:2: error: expected specifier-qualifier-list before 'pno'
+  pno(*AddClient)(config_option*);
+  ^~~
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:82:20: error: 'struct config_option' has no member named 'AddClient'
+      set_text_alert.AddClient = set_color();
+                    ^
+..\src\OK_TEST.c:84:26: error: 'struct config_option' has no member named 'AddClient'
+      num = set_text_alert.AddClient;
+                          ^
+15:35:11 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c:24:21: error: expected identifier or '(' before ',' token
+ struct config_option, *pno
+                     ^
+..\src\OK_TEST.c:28:3: warning: data definition has no type or storage class
+ } set_text_alert;
+   ^~~~~~~~~~~~~~
+..\src\OK_TEST.c:28:3: warning: type defaults to 'int' in declaration of 'set_text_alert' [-Wimplicit-int]
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:82:20: error: request for member 'AddClient' in something not a structure or union
+      set_text_alert.AddClient = set_color();
+                    ^
+..\src\OK_TEST.c:84:26: error: request for member 'AddClient' in something not a structure or union
+      num = set_text_alert.AddClient;
+                          ^
+15:35:25 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:82:31: warning: assignment to 'struct config_option * (*)(config_option *)' {aka 'struct config_option * (*)(struct config_option *)'} from incompatible pointer type 'int *' [-Wincompatible-pointer-types]
+      set_text_alert.AddClient = set_color();
+                               ^
+..\src\OK_TEST.c:84:10: warning: assignment to 'int *' from incompatible pointer type 'struct config_option * (*)(config_option *)' {aka 'struct config_option * (*)(struct config_option *)'} [-Wincompatible-pointer-types]
+      num = set_text_alert.AddClient;
+          ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+Info: Nothing to build for test_swtichcase_
+Info: Nothing to build for OK_TEST
+13:58:52 **** Rebuild of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+15:49:03 **** Rebuild of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+15:49:20 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+Info: Nothing to build for OK_TEST
+22:02:06 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'counter_':
+..\src\OK_TEST.c:9:18: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  printf("count: %d\n");
+                 ~^
+..\src\OK_TEST.c:10:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:02:24 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'counter_':
+..\src\OK_TEST.c:10:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:02:41 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'counter_':
+..\src\OK_TEST.c:10:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:09:32 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'counter_':
+..\src\OK_TEST.c:10:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:10:26 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'counter_':
+..\src\OK_TEST.c:10:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:10:34 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'counter_':
+..\src\OK_TEST.c:10:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:10:48 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'counter_':
+..\src\OK_TEST.c:10:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:16:06 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'counter_':
+..\src\OK_TEST.c:10:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+Info: Nothing to build for OK_TEST
+22:18:49 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'counter_':
+..\src\OK_TEST.c:8:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:19:06 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'counter_':
+..\src\OK_TEST.c:8:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+Info: Nothing to build for OK_TEST
+08:00:26 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'counter_':
+..\src\OK_TEST.c:8:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+17:59:03 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+00:14:08 **** Clean-only build of configuration Debug for project OK_TEST ****
+rm -rf src/OK_TEST.o src/OK_TEST.d OK_TEST.exe 
+Cannot run program "rm": Launching failed
+
+Error: Program "rm" not found in PATH
+PATH=[C:\MinGW\bin;\bin;C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\thanasak.civicmedia\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\thanasak.civicmedia\AppData\Local\Programs\Python\Python38-32\;C:\Users\thanasak.civicmedia\AppData\Local\Microsoft\WindowsApps;C:\Users\thanasak.civicmedia\AppData\Local\atom\bin;C:\Users\thanasak.civicmedia\Downloads\eclipse-cpp-luna-SR2-win32-x86_64\eclipse]
+
+00:14:08 **** Clean-only build of configuration Debug for project OK_TEST ****
+00:14:08 **** Clean-only build of configuration Debug for project test_swtichcase_ ****
+rm -rf test_swtichcase_.exe src/test_swtichcase_.d src/test_swtichcase_.o 
+Cannot run program "rm": Launching failed
+
+Error: Program "rm" not found in PATH
+PATH=[C:\MinGW\bin;\bin;C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\thanasak.civicmedia\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\thanasak.civicmedia\AppData\Local\Programs\Python\Python38-32\;C:\Users\thanasak.civicmedia\AppData\Local\Microsoft\WindowsApps;C:\Users\thanasak.civicmedia\AppData\Local\atom\bin;C:\Users\thanasak.civicmedia\Downloads\eclipse-cpp-luna-SR2-win32-x86_64\eclipse]
+
+00:14:08 **** Clean-only build of configuration Debug for project test_swtichcase_ ****
+22:14:00 **** Rebuild of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:14:02 **** Rebuild of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+22:44:51 **** Rebuild of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:66:16: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+   printf("I'm %s. I came with", name + i);
+               ~^                ~~~~~~~~
+..\src\OK_TEST.c:68:14: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+    printf(" %s", name + j);
+             ~^   ~~~~~~~~
+..\src\OK_TEST.c:72:15: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+     printf(" %s", name + j);
+              ~^   ~~~~~~~~
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:46:48 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:62:22: warning: initializer-string for array of chars is too long
+  char name[3][3] = { "Jane", "Noon", "Bow" };
+                      ^~~~~~
+..\src\OK_TEST.c:62:22: note: (near initialization for 'name[0]')
+..\src\OK_TEST.c:62:30: warning: initializer-string for array of chars is too long
+  char name[3][3] = { "Jane", "Noon", "Bow" };
+                              ^~~~~~
+..\src\OK_TEST.c:62:30: note: (near initialization for 'name[1]')
+..\src\OK_TEST.c:66:16: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[3]' [-Wformat=]
+   printf("I'm %s. I came with", name + i);
+               ~^                ~~~~~~~~
+..\src\OK_TEST.c:68:14: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[3]' [-Wformat=]
+    printf(" %s", name + j);
+             ~^   ~~~~~~~~
+..\src\OK_TEST.c:72:15: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[3]' [-Wformat=]
+     printf(" %s", name + j);
+              ~^   ~~~~~~~~
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:47:06 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:66:16: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+   printf("I'm %s. I came with", name + i);
+               ~^                ~~~~~~~~
+..\src\OK_TEST.c:68:14: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+    printf(" %s", name + j);
+             ~^   ~~~~~~~~
+..\src\OK_TEST.c:72:15: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+     printf(" %s", name + j);
+              ~^   ~~~~~~~~
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:52:02 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:66:16: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+   printf("I'm %s. I came with", name + i);
+               ~^                ~~~~~~~~
+..\src\OK_TEST.c:68:14: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+    printf(" %s", name + j);
+             ~^   ~~~~~~~~
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:52:41 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:66:16: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+   printf("I'm %s. I came with", name + i);
+               ~^                ~~~~~~~~
+..\src\OK_TEST.c:68:14: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+    printf(" %s", name + j);
+             ~^   ~~~~~~~~
+..\src\OK_TEST.c:72:15: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+     printf(" %s", name + j);
+              ~^   ~~~~~~~~
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:53:18 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:62:27: error: excess elements in char array initializer
+  char name[3] = { "Jane", "Noon", "Bow" };
+                           ^~~~~~
+..\src\OK_TEST.c:62:27: note: (near initialization for 'name')
+..\src\OK_TEST.c:62:35: error: excess elements in char array initializer
+  char name[3] = { "Jane", "Noon", "Bow" };
+                                   ^~~~~
+..\src\OK_TEST.c:62:35: note: (near initialization for 'name')
+22:53:41 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:66:16: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+   printf("I'm %s. I came with", name + i);
+               ~^                ~~~~~~~~
+..\src\OK_TEST.c:68:14: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+    printf(" %s", name + j);
+             ~^   ~~~~~~~~
+..\src\OK_TEST.c:72:15: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+     printf(" %s", name + j);
+              ~^   ~~~~~~~~
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+22:55:11 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+..\src\OK_TEST.c: In function 'main':
+..\src\OK_TEST.c:62:26: error: excess elements in char array initializer
+  char name[] = { "Jane", "Noon", "Bow" };
+                          ^~~~~~
+..\src\OK_TEST.c:62:26: note: (near initialization for 'name')
+..\src\OK_TEST.c:62:34: error: excess elements in char array initializer
+  char name[] = { "Jane", "Noon", "Bow" };
+                                  ^~~~~
+..\src\OK_TEST.c:62:34: note: (near initialization for 'name')
+22:57:44 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+23:01:46 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+23:03:03 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+23:03:44 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+23:04:03 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+23:13:09 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+23:14:04 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+23:15:45 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+23:18:29 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+23:32:31 **** Incremental Build of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+Info: Nothing to build for OK_TEST
+18:01:47 **** Rebuild of configuration Debug for project OK_TEST ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\OK_TEST.o" "..\\src\\OK_TEST.c" 
+gcc -o OK_TEST.exe "src\\OK_TEST.o" 
+18:01:49 **** Rebuild of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 

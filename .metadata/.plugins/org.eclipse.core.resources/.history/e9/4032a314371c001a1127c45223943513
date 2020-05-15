@@ -1,0 +1,167 @@
+package com.java.blue_set;
+
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+
+public class Form1 extends JFrame {
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				Form1 form = new Form1();
+				form.setVisible(true);
+			}
+		});
+	}
+
+	private JTextField textField_2;
+	
+	public Form1() {
+
+		getContentPane().setBackground(Color.MAGENTA);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(new Dimension(500, 500));
+		setTitle("TEST_JAVA");
+		getContentPane().setLayout(null);
+
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+
+		JButton btnNewButton_2 = new JButton("New button");
+		btnNewButton_2.setBounds(329, 63, 89, 23);
+		getContentPane().add(btnNewButton_2);
+
+		JButton btnNewButton_4 = new JButton("New button");
+		btnNewButton_4.setBounds(329, 99, 89, 23);
+		getContentPane().add(btnNewButton_2);
+
+		JButton btnNewButton_3 = new JButton("New button");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane.showMessageDialog(null, "HoHo");
+//				ConnectSerial();
+			}
+		});
+		btnNewButton_3.setBounds(250, 258, 89, 23);
+		getContentPane().add(btnNewButton_3);
+
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(150, 121, 169, 115);
+		getContentPane().add(textArea);
+
+		textField_2 = new JTextField();
+		textField_2.setBounds(169, 66, 112, 20);
+		getContentPane().add(textField_2);
+		textField_2.setColumns(10);
+	}
+	private void ConnectSerial() {
+		// initalize serial port
+		try {
+			portId = CommPortIdentifier.getPortIdentifier(port);
+		} catch (Exception exception) {
+		}
+
+		try {
+			serialPort = (SerialPort) portId.open("Test232", 2000);
+		} catch (PortInUseException e) {
+		}
+
+		try {
+			outputStream = serialPort.getOutputStream();
+		} catch (Exception exception) {
+		}
+
+		try {
+			inputStream = serialPort.getInputStream();
+		} catch (IOException e) {
+		}
+
+		try {
+			serialPort.addEventListener(this);
+		} catch (TooManyListenersException e) {
+		}
+
+		// activate the DATA_AVAILABLE notifier
+		serialPort.notifyOnDataAvailable(true);
+
+		try {
+			// set port parameters
+			serialPort.setSerialPortParams(baudrate, SerialPort.DATABITS_8,
+					SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
+		} catch (UnsupportedCommOperationException e) {
+		}
+
+	}
+
+	@Override
+	public void serialEvent(SerialPortEvent event) {
+		switch (event.getEventType()) {
+		case SerialPortEvent.BI:
+		case SerialPortEvent.OE:
+		case SerialPortEvent.FE:
+		case SerialPortEvent.PE:
+		case SerialPortEvent.CD:
+		case SerialPortEvent.CTS:
+		case SerialPortEvent.DSR:
+		case SerialPortEvent.RI:
+		case SerialPortEvent.OUTPUT_BUFFER_EMPTY:
+			break;
+		case SerialPortEvent.DATA_AVAILABLE:
+			ReadData();
+			break;
+		}
+	}
+
+	public void ReadData() {
+
+		try {
+			/** if command available hardware respone data here **/
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
+					inputStream, "tis-620"));
+			String line = "";
+
+			while ((line = reader.readLine()) != null) {
+
+				if (line.length() > 0) {
+
+					final String testline = line;
+					SwingUtilities.invokeLater(new Runnable() {
+						public void run() {
+							m_shTxt.setText(Integer.toString(i));
+							jTextArea1.append(testline + "\n");
+							i++;
+						}
+					});
+
+				}
+			}
+		} catch (IOException e) {
+		}
+	}
+
+	@Override
+	public void run() {
+		try {
+			Thread.sleep(20000);
+		} catch (InterruptedException e) {
+		}
+
+	}
+}
+
+}

@@ -1,0 +1,59 @@
+package com.java.blue_set;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JToolBar;
+
+public class Form1 {
+
+	private JFrame frame;
+
+	   /**
+	    * @wbp.parser.entryPoint
+	    */
+	   public static void main(String []args) {
+		   test_loop();
+		   String name = JOptionPane.showInputDialog(null,"what you name");
+		   int choice = JOptionPane.showConfirmDialog(null, "do you like,"+ name +"?");
+		   if (choice == JOptionPane.NO_OPTION)
+		   {
+			   JOptionPane.showMessageDialog(null, "OK_sir");
+			   
+		   }
+		   else
+		   {
+			   
+			   JOptionPane.showMessageDialog(null, "NOT_OK");
+		   }
+		  }
+	   /**
+	    * @wbp.parser.entryPoint
+	    */
+	   static void test_loop()
+	   {
+		   JFrame frame = new JFrame();
+		   frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		   frame.setSize(new Dimension(500,500));
+		   frame.setTitle("TEST_JAVA");
+
+		   JButton button_1 = new JButton();
+		   button_1.setText("BUTTON_test");
+		   button_1.setSize(new Dimension(50,70));
+		   JButton button_2 = new JButton();
+		   button_2.setText("BUTTON_test");
+		   button_2.setSize(new Dimension(50,70));
+		   JComboBox combobox = new JComboBox();
+		   
+		   button_1.setBackground(Color.BLUE);
+		   frame.getContentPane().add(button_1);
+		   frame.setVisible(true);
+		   
+	   }
+	}       

@@ -1,0 +1,19 @@
+package com.java.blue_set;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+public class Form1 {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	   public static void main(String []args) {
+		      JOptionPane.showMessageDialog(null,"HELLO_WORLD");
+		   }
+	}

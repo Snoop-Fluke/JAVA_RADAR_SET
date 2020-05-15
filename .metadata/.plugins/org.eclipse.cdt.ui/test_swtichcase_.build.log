@@ -1,0 +1,7 @@
+18:01:49 **** Rebuild of configuration Debug for project test_swtichcase_ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test_swtichcase_.o" "..\\src\\test_swtichcase_.c" 
+gcc -o test_swtichcase_.exe "src\\test_swtichcase_.o" 
+
+18:01:49 Build Finished (took 555ms)
+

@@ -1,0 +1,14 @@
+package com.java.blue_set;
+
+public class Form4 {
+
+	public static void main(String[] args) {
+		try {
+			Form4 window = new Form4();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}
