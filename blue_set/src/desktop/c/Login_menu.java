@@ -30,9 +30,18 @@ public class Login_menu implements ActionListener {
 
 			if (model.login_(user, password)) {
 				view.setVisible(false);
+				// Select_page view = new Select_page();
+				// new select_menu(view);
+				// System.out.print(user);
 				Select_page view = new Select_page();
 				new select_menu(view);
-				System.out.print(user);
+				// try {
+				// model.startServer();
+				// } catch (IOException e1) {
+				// // TODO Auto-generated catch block
+				// e1.printStackTrace();
+				// }
+
 			}
 		}
 

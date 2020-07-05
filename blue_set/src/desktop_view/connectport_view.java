@@ -9,6 +9,7 @@ public class connectport_view extends JFrame {
 	private JButton btn_connect;
 	private JButton btn_refresh;
 	private JButton btn_disconnect;
+	private JButton btn_back;
 	private JLabel show_port;
 
 	public JButton getBtn_refresh() {
@@ -31,6 +32,10 @@ public class connectport_view extends JFrame {
 		initialize();
 	}
 
+	public JButton getBtn_back() {
+		return btn_back;
+	}
+
 	private void initialize() {
 
 		setBounds(100, 100, 500, 500);
@@ -51,6 +56,10 @@ public class connectport_view extends JFrame {
 		btn_refresh = new JButton("refresh");
 		btn_refresh.setBounds(77, 75, 97, 25);
 		getContentPane().add(btn_refresh);
+
+		btn_back = new JButton("BACK");
+		btn_back.setBounds(0, 428, 97, 25);
+		getContentPane().add(btn_back);
 
 	}
 }

@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import desktop.model.config_port;
+import desktop_view.Select_page;
 import desktop_view.connectport_view;
 
 public class connectport_menu implements ActionListener {
@@ -15,6 +16,8 @@ public class connectport_menu implements ActionListener {
 		this.view = view;
 		this.model = model;
 		view.setVisible(true);
+		view.getBtn_back().setActionCommand("back");
+		view.getBtn_back().addActionListener(this);
 		view.getBtn_refresh().setActionCommand("refresh");
 		view.getBtn_refresh().addActionListener(this);
 		view.getBtn_connect().setActionCommand("connect");
@@ -30,6 +33,13 @@ public class connectport_menu implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 
 		String command = e.getActionCommand();
+
+		if (command.equals("back")) {
+			view.setVisible(false);
+			Select_page view = new Select_page();
+			new select_menu(view);
+		}
+
 		if (command.equals("connect")) {
 			// Select_page select = new Select_page();
 			// new select_menu(select);

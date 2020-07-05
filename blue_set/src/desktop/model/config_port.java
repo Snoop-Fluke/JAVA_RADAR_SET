@@ -86,10 +86,10 @@ public class config_port extends config_para {
 		}
 	}
 
-	public void start_set() {
+	public void start_set(String data_to_send) {
 		try {
 
-			byte[] b = Send_Json.getBytes();
+			byte[] b = data_to_send.getBytes();
 			output.write(b);
 
 		} catch (Exception e) {

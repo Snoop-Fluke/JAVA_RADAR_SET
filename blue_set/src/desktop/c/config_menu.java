@@ -23,9 +23,6 @@ public class config_menu implements ActionListener {
 		view.getBtn_read().setActionCommand("read");
 		view.getBtn_read().addActionListener(this);
 
-		view.getBtn_back().setActionCommand("back");
-		view.getBtn_back().addActionListener(this);
-
 		view.getCbb_color().setActionCommand("getcolor");
 		view.getCbb_color().addActionListener(this);
 
@@ -39,7 +36,9 @@ public class config_menu implements ActionListener {
 
 		String command = e.getActionCommand();
 		if (command.equals("back")) {
+			model.start_set("MO01");
 			view.setVisible(false);
+
 			Select_page view = new Select_page();
 			new select_menu(view);
 		}
@@ -101,10 +100,10 @@ public class config_menu implements ActionListener {
 			int sp_st = Integer.parseInt(view.getSp_st().getText().trim());
 			String sp_st_ = String.format("%02x", sp_st);
 
-			System.out.println("blink_set :" + model.txtbox_set(blink_, 60));
-			System.out.println("blink_set :" + model.txtbox_set(tm_mnt, 60));
-			System.out.println("blink_set :" + model.txtbox_set(sp_lm, 250));
-			System.out.println("blink_set :" + model.txtbox_set(sp_st, 150));
+			// System.out.println("blink_set :" + model.txtbox_set(blink_, 60));
+			// System.out.println("blink_set :" + model.txtbox_set(tm_mnt, 60));
+			// System.out.println("blink_set :" + model.txtbox_set(sp_lm, 250));
+			// System.out.println("blink_set :" + model.txtbox_set(sp_st, 150));
 
 			ptr[2] = model.hex_callback(blink, "3a");
 			ptr[3] = model.hex_callback(tm_mnt_, "4a");

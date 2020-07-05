@@ -10,6 +10,5 @@ public class main_run {
 		Login_page view = new Login_page();
 		Login_ model = new Login_();
 		new Login_menu(view, model);
-
 	}
 }
